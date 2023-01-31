@@ -2,3 +2,52 @@
     background-color: black;
     color: #fff;
 }
+
+.hamburger-btn{
+    width: 37px;
+    height: 37px;
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+.hamburger-btn .hamburger-icon{
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.hamburger-btn .hamburger-icon::after,
+.hamburger-btn .hamburger-icon::before{
+    content: '';
+    position: absolute;
+    top: -10px;
+    background-color: #fff;
+    width: 70%;
+    height: 2px;
+}
+
+.hamburger-btn .hamburger-icon::before{
+    top: 10px;
+}
+
+/* Button active state effect */
+.hamburger-btn .hamburger-icon.is-active{
+    transform: rotate(135deg);
+}
+
+.hamburger-btn .hamburger-icon.is-active::after,
+.hamburger-btn .hamburger-icon.is-active::before{
+    width: 100%;
+    top: 0;
+    transform: rotate(270deg);
+}
+
+.hamburger-btn .hamburger-icon.is-active:hover{
+    transform: rotate(225deg);
+}
