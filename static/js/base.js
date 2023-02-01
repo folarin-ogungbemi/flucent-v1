@@ -3,11 +3,17 @@ document.addEventListener('DOMContentLoaded', () => {
     let topNav = document.getElementsByTagName('nav')[0] ;
     topNav.children[1].appendChild(navlistEl);
     topNav.children[1].appendChild(hamburgerBtn);
-    topNav.children[1].appendChild(mobileNavlistEl);
+    topNav.children[1].appendChild(mobileNavDivEl1);
+
+    const homeBtn1 = document.getElementsByTagName('li')[0];
+    const homeBtn2 = document.getElementsByTagName('li')[5];
+    homeBtn1.style.color = "red";
+    homeBtn2.style.color = "red";
 });
 
 // create dictionary to be iterated on
 const navDict = {
+    Home: "/",
     About: "#",
     Projects: "#",
     Contact: "#",
@@ -23,11 +29,16 @@ hamburgerBtn.className = 'hamburger-btn d-block d-md-none ms-auto';
 
 // create nav list element
 let navlistEl = document.createElement('ul');
-navlistEl.className = 'd-none d-md-flex list-unstyled justify-content-around';
+navlistEl.className = 'd-none d-md-flex list-unstyled nav-list';
 
 // create mobile-nav list element
+let mobileNavDivEl1 = document.createElement('div');
+let mobileNavDivEl2 = document.createElement('div');
 let mobileNavlistEl = document.createElement('ul');
-mobileNavlistEl.className = 'd-block d-md-none list-unstyled mobile-nav';
+mobileNavDivEl1.appendChild(mobileNavDivEl2);
+mobileNavDivEl2.appendChild(mobileNavlistEl);
+mobileNavDivEl1.className = 'd-block d-md-none';
+mobileNavlistEl.className = 'list-unstyled mobile-nav';
 
 let navItems = Object.entries(navDict);
 for (item of navItems) {
@@ -43,5 +54,6 @@ for (item of navItems) {
 
 hamburgerBtn.addEventListener('click', () => {
     hamburgerIcon.classList.toggle('is-active');
-    mobileNavlistEl.classList.toggle('is-active');
+    mobileNavDivEl1.classList.toggle('is-active');
+    mobileNavDivEl2.classList.toggle('is-active');
 })
