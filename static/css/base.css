@@ -1,19 +1,28 @@
+
+:root{
+    /* typograpyh */
+    --fs-xl: clamp(1.6rem, 7vw, 3.6rem);
+    /* colors */
+    --f-col-dark: #0a031a;
+    --f-col-grab: #ED5959;
+    --f-col-light: #fff;
+}
+
 header{
-    background-color: black;
+    background-color: var(--f-col-dark);
 }
 
 #top-nav{
     min-height: 70px;
     align-items: center;
-    color: #fff;
+    color: var(--f-col-light);
 }
 
 #top-nav a.logo{
-    color: #fff;
+    color: var(--f-col-light);
 }
 
 .nav-list{
-    justify-content: space-between;
     margin: auto;
 }
 
@@ -24,9 +33,13 @@ header{
 /* Resume button */
 .mobile-nav li:last-child,
 .nav-list li:last-child{
-  border: 1px solid yellow;
+  border: 1px solid var(--f-col-grab);
   padding: 5px 15px;
   border-radius: 5px;
+}
+
+.nav-list li:last-child{
+    margin-left: 12rem;
 }
 
 .mobile-nav li:last-child{
@@ -46,7 +59,7 @@ header{
     position: relative;
     width: 100%;
     height: 2px;
-    background-color: #fff;
+    background-color: var(--f-col-light);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,7 +72,7 @@ header{
     content: '';
     position: absolute;
     top: -10px;
-    background-color: #fff;
+    background-color: var(--f-col-light);
     width: 70%;
     height: 2px;
 }
@@ -86,7 +99,7 @@ header{
     left: 100%;
     width: 100%;
     height: 100vh;
-    background-color: black;
+    background-color: var(--f-col-dark);
     z-index:1;
     transition: left 0.5s ease;
 }
@@ -107,6 +120,7 @@ header{
 /* Button active state effect */
 .hamburger-btn .hamburger-icon.is-active{
     transform: rotate(135deg);
+    background-color: var(--f-col-grab);
 }
 
 .hamburger-btn .hamburger-icon.is-active::after,
@@ -114,6 +128,7 @@ header{
     width: 100%;
     top: 0;
     transform: rotate(270deg);
+    background-color: var(--f-col-grab);
 }
 
 .hamburger-btn .hamburger-icon.is-active:hover{

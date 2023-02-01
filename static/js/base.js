@@ -5,10 +5,17 @@ document.addEventListener('DOMContentLoaded', () => {
     topNav.children[1].appendChild(hamburgerBtn);
     topNav.children[1].appendChild(mobileNavDivEl1);
 
+    // home link button
     const homeBtn1 = document.getElementsByTagName('li')[0];
     const homeBtn2 = document.getElementsByTagName('li')[5];
-    homeBtn1.style.color = "red";
-    homeBtn2.style.color = "red";
+    homeBtn1.style.color = "#ED5959";
+    homeBtn2.style.color = "#ED5959";
+
+    // resume button
+    const resumeBtn1 = document.getElementsByTagName('li')[4];
+    const resumeBtn2 = document.getElementsByTagName('li')[9];
+    resumeBtn1.className = 'action-btn';
+    resumeBtn2.className = 'action-btn';
 });
 
 // create dictionary to be iterated on
