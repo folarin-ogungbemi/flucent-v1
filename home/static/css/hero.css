@@ -6,6 +6,14 @@
     color: #fff;
 }
 
+.hero-content{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .hero-content h1 .goal{
     opacity: 0.65;
 }
