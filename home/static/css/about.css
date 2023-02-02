@@ -1,0 +1,70 @@
+/* Section Header line */
+.section-header{
+    position: relative;
+    font-size: 2rem;
+}
+
+.section-header::before{
+    content: '';
+    position: absolute;
+    width: 45.5%;
+    top: 50%;
+    left: 54.5%;
+    background-color: var(--f-col-light);
+    height: 1px;
+    opacity: 0.1;
+}
+
+.section-header::after{
+    content: '';
+    position: absolute;
+    width: 45.5%;
+    top: 50%;
+    right: 54.5%;
+    background-color: var(--f-col-light);
+    height: 1px;
+    opacity: 0.1;
+}
+
+/* Technical Skills */
+.technical-skills{
+    display: grid;
+    gap: .125;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    width: 90%;
+}
+
+.skill-btn{
+    width: 140px;
+    border: 2px solid rgba(237, 89, 89, 0.5);
+    box-shadow: 0.5px 0.5px 1.5px 0.5px rgba(237, 89, 89, 0.5);
+    text-align: center;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.skill-btn a{
+    text-decoration: none;
+    color: rgba(237, 89, 89, 0.5);
+}
+
+.skill-btn:hover{
+    border: none;
+}
+
+@media (max-width:400px){
+    .technical-skills{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .skill-btn{
+        width: 120px;
+        padding: 3px 8px;
+    }
+}
+
+.about-text{
+    width: 90%;
+    margin: auto;
+    margin-top: 1rem;
+}

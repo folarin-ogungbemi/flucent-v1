@@ -3,6 +3,7 @@
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'css/hero.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -10,13 +11,7 @@
         {% include 'home/includes/hero.html' %}
     </section>
     <section id="about" class="container-fluid">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2>About</h2>
-                </div>
-            </div>
-        </div>
+        {% include 'home/includes/about.html' %}
     </section>
     <section id="projects" class="container-fluid">
         <div class="container">
@@ -40,4 +35,5 @@
 {% block post_load_js %}
     {{ block.super }}
     <script src="{% static 'js/hero.js' %}"></script>
+    <script src="{% static 'js/about.js' %}"></script>
 {% endblock %}
