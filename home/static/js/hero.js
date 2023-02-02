@@ -20,7 +20,7 @@ heroSocialList.className = "list-unstyled social-icons";
 for (let link of socials){
     for (let i in link){
         let socialLinks = `
-        <li class="ms-5">
+        <li>
             <a 
             href="${link[i]}"
             target="_blank"

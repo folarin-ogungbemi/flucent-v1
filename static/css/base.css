@@ -6,6 +6,16 @@
     --f-col-dark: #0a031a;
     --f-col-grab: #ED5959;
     --f-col-light: #fff;
+    /* transition */
+    --trans-ease: all 0.5s ease-in-out;
+}
+
+/* General */
+
+.social-icons a:hover,
+.nav-list a:hover{
+    color: var(--f-col-grab);
+    transition: var(--trans-ease);
 }
 
 header{
@@ -31,19 +41,15 @@ header{
 }
 
 /* Resume button */
-.mobile-nav li:last-child,
-.nav-list li:last-child{
-  border: 1px solid var(--f-col-grab);
-  padding: 5px 15px;
-  border-radius: 5px;
+.nav-list li:last-child,
+.mobile-nav li:last-child{
+    width: fit-content;
+    padding: 5px 15px;
+    margin: auto;
 }
 
 .nav-list li:last-child{
     margin-left: 12rem;
-}
-
-.mobile-nav li:last-child{
-    margin-top: 1rem;
 }
 
 /* Hamburger button */
