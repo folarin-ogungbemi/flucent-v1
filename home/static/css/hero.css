@@ -32,23 +32,6 @@
 }
 
 /* Buttons */
-.action-btn{
-    color: var(--f-col-grab) !important;
-    border: 1.5px solid var(--f-col-grab);
-    background: rgba(237, 89, 89, 0.2);
-    border-radius: 5px;
-    font-weight: 500;
-    width: fit-content;
-    padding: 5px 15px;
-}
-
-.action-btn:hover{
-    color: var(--f-col-grab);
-    border: 1.5px solid var(--f-col-grab);
-    background: rgba(237, 89, 89, 0.4);
-    transition: var(--trans-ease);
-}
-
 .btn-hero{
     padding: 15px 35px;
     text-decoration: none;
