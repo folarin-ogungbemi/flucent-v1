@@ -46,7 +46,7 @@ for (let name of projectName){
 let projectDisplay = document.getElementsByClassName('project-display')[0];
 const projectInfo = projects.map(project => {
     let projectView = 
-    `<div class="col-8 project-item mx-auto mt-3">
+    `<div class="col-12 col-md-8 project-content mx-auto mt-3">
         <div class="project" id="${project.name}">
             <div class="project-caption h-100 w-100">
                 <div class="project-caption-content">
@@ -92,7 +92,7 @@ const projectInfo = projects.map(project => {
 
 document.addEventListener('DOMContentLoaded', () =>{
     const projectBtn = document.querySelectorAll('.project-btn');
-    const projectContent = document.querySelectorAll('.project-item');
+    const projectContent = document.querySelectorAll('.project-content');
     projectBtn.forEach((project, item) => {
         project.addEventListener('click', () =>{
             // toggle project button

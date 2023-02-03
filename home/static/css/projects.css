@@ -1,5 +1,7 @@
 /* Technical Skills */
 .projects{
+    display: flex;
+    flex-wrap: wrap;
     gap: 0.5rem;
     justify-content: center;
 }
@@ -17,11 +19,11 @@
     transition: var(--trans-ease);
 }
 
-.project-item{
+.project-content{
     display: none;
 }
 
-.project-item.active{
+.project-content.active{
     display: block;
     animation-name: slideDown;
     animation-duration: 1s;
@@ -85,4 +87,20 @@
 
 .language{
     opacity: 0.7;
+}
+
+
+@media (max-width: 600px){
+    .project-display .project .project-caption {
+        overflow: scroll;
+        opacity: 1;
+    }
+
+    .project-caption-content a{
+    font-size: 1rem;
+    }
+
+    .language{
+        font-size: 1rem;
+    }
 }
