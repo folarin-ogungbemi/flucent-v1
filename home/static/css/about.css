@@ -62,9 +62,12 @@
     border: 2px solid var(--f-col-dark);
 }
 
-@media (max-width:400px){
+@media (max-width:600px){
     .technical-skills{
-        grid-template-columns: repeat(2, 1fr);
+        width: 100vw;
+        grid-auto-flow: column;
+        gap: 0.5rem;
+        overflow: scroll;
     }
     
     .skill-btn{
