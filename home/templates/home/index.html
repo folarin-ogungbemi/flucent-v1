@@ -4,6 +4,7 @@
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'css/hero.css' %}">
     <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/projects.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -15,11 +16,7 @@
     </section>
     <section id="projects" class="container-fluid">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2>Project</h2>
-                </div>
-            </div>
+            {% include 'home/includes/projects.html' %}
         </div>
     </section>
     <section id="contact" class="container-fluid">
@@ -36,4 +33,5 @@
     {{ block.super }}
     <script src="{% static 'js/hero.js' %}"></script>
     <script src="{% static 'js/about.js' %}"></script>
+    <script src="{% static 'js/projects.js' %}"></script>
 {% endblock %}

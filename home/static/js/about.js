@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
 });
 
-
 for (let skill of skills){
     let skillHead = `
     <ul class="list-unstyled skill-list">
