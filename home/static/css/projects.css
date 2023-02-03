@@ -6,6 +6,39 @@
 
 .project-btn{
     width: fit-content;
+    cursor: pointer;
+    color: var(--f-col-grab);
+}
+
+.project-btn.active{
+    color: var(--f-col-light);
+    border: 2px solid var(--f-col-light);
+    box-shadow: 0.5px 0.5px 1.5px 0.5px rgba(255, 255, 255, 0.5);
+    transition: var(--trans-ease);
+}
+
+.project-item{
+    display: none;
+}
+
+.project-item.active{
+    display: block;
+    animation-name: slideLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    
+}
+
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .projects-content{
@@ -17,8 +50,6 @@
     overflow: hidden;
     cursor: pointer;
     border-radius: 10px;
-    /* max-width: 25rem; */
-    display: block;
 }
 
 .project-display .project .project-caption {
