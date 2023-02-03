@@ -1,0 +1,10 @@
+/* Technical Skills */
+.projects{
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.project-btn{
+    width: fit-content;
+}
+

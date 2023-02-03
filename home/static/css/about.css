@@ -37,11 +37,11 @@
 /* Technical Skills */
 .technical-skills{
     display: grid;
-    gap: .125;
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     width: 90%;
 }
 
+.project-btn,
 .skill-btn{
     width: 140px;
     border: 2px solid rgba(237, 89, 89, 0.5);
@@ -51,13 +51,15 @@
     border-radius: 5px;
 }
 
+.project-btn a,
 .skill-btn a{
     text-decoration: none;
     color: rgba(237, 89, 89, 0.5);
 }
 
+.project-btn:hover,
 .skill-btn:hover{
-    border: none;
+    border: 2px solid var(--f-col-dark);
 }
 
 @media (max-width:400px){

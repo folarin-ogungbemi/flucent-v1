@@ -13,10 +13,7 @@
 
 /* General */
 
-#hero,
-#about,
-#projects,
-#contact{
+body{
     background-color: #0A031A;
     color: #fff;
 }
