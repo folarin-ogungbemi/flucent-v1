@@ -23,13 +23,13 @@
 
 .project-item.active{
     display: block;
-    animation-name: slideLeft;
+    animation-name: slideDown;
     animation-duration: 1s;
     animation-timing-function: ease-out;
     
 }
 
-@keyframes slideLeft {
+@keyframes slideDown {
     0% {
         opacity: 0;
         transform: translateY(-30px);

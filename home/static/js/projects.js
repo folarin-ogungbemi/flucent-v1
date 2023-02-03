@@ -103,4 +103,6 @@ document.addEventListener('DOMContentLoaded', () =>{
             projectContent[item].classList.add('active');
         })
     });
+    projectBtn[0].classList.add('active');
+    projectContent[0].classList.add('active');
 })
