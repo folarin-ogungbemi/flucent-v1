@@ -38,6 +38,8 @@
     background: rgba(237, 89, 89, 0.2);
     border-radius: 5px;
     font-weight: 500;
+    width: fit-content;
+    padding: 5px 15px;
 }
 
 .action-btn:hover{

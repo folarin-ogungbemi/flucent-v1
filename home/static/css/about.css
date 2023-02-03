@@ -63,8 +63,17 @@
     }
 }
 
-.about-text{
-    width: 90%;
+.about-text-body{
+    width: 70%;
     margin: auto;
     margin-top: 1rem;
+}
+
+.about-text{
+    line-height: 1.5rem;
+    opacity: 0.85;
+}
+
+.highlight-color{
+    color: var(--f-col-grab);
 }

@@ -2,7 +2,14 @@ const skills = [
     'HTML', 'CSS', 'Javascript', 'Python', 'Materialize', 'Stripe', 'Google Cloud',
     'Bootstrap', 'Flask', 'Django', 'postgreSQL', 'Heroku', 'Git', 'Agile']
 
-let technicalSkills = document.getElementsByTagName('section')[2]
+let technicalSkills = document.getElementsByClassName('technical-skills')[0];
+document.addEventListener('DOMContentLoaded', ()=>{
+    const aboutTextBody = document.getElementsByClassName('about-text-body')[0].getElementsByTagName('p');
+    for (let p of aboutTextBody){
+        p.className = "about-text";
+    }
+});
+
 
 for (let skill of skills){
     let skillHead = `
@@ -11,3 +18,4 @@ for (let skill of skills){
     </ul>`
     technicalSkills.innerHTML += skillHead;
 }
+

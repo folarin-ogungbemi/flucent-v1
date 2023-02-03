@@ -44,7 +44,6 @@ header{
 /* Resume button */
 .nav-list li:last-child,
 .mobile-nav li:last-child{
-    width: fit-content;
     padding: 5px 15px;
     margin: auto;
 }

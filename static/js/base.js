@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // create dictionary to be iterated on
 const navDict = {
     Home: "/",
-    About: "#",
+    About: "#about",
     Projects: "#",
     Contact: "#",
     Resume: "#",
