@@ -64,8 +64,8 @@ const projectInfo = projects.map(project => {
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-12 mt-2 project-info">
-                        <span class="capitalize project-name fs-5">${project.name}</span>
+                    <div class="col-12 mt-2">
+                        <h4 class="capitalize project-name">${project.name}</h4>
                         <p class="small">${project.description}</p>`;
                             let projectTechList = 
                             `<ul class="d-flex justify-content-start list-unstyled">`
@@ -81,9 +81,9 @@ const projectInfo = projects.map(project => {
                 </div> 
             </div>
         </div>
-    <img class="img-fluid" src="${project.image}" alt="project mockup" />
-</div>`
-        
+        <img class="img-fluid" src="${project.image}" alt="project mockup" />
+    </div>`;
+
     projectDisplay.innerHTML += projectView;
 });                        
     

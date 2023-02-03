@@ -8,3 +8,50 @@
     width: fit-content;
 }
 
+.projects-content{
+    height: 80vh;
+}
+
+.project-display .project {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    /* max-width: 25rem; */
+    display: block;
+}
+
+.project-display .project .project-caption {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.25;
+    transition: var(--trans-ease);
+    background-color: var(--f-col-light);
+    color: var(--f-col-dark);
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.project-caption-content a{
+    font-size: 1.7rem;
+    color: var(--f-col-dark);
+}
+
+.project-caption-content a:hover{
+    color: var(--f-col-grab);
+    transition: var(--trans-ease);
+}
+
+.project-name{
+    color: var(--f-col-grab);
+}
+
+.project-display .project .project-caption:hover {
+    opacity: 1;
+}
+
+.language{
+    opacity: 0.7;
+}
