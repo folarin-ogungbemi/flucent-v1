@@ -4,7 +4,7 @@ const skills = [
 
 let technicalSkills = document.getElementsByClassName('technical-skills')[0];
 document.addEventListener('DOMContentLoaded', ()=>{
-    const aboutTextBody = document.getElementsByClassName('about-text-body')[0].getElementsByTagName('p');
+    const aboutTextBody = document.getElementsByClassName('about-content')[0].getElementsByTagName('p');
     for (let p of aboutTextBody){
         p.className = "about-text";
     }
