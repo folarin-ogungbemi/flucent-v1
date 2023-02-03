@@ -12,6 +12,15 @@
 }
 
 /* General */
+
+#hero,
+#about,
+#projects,
+#contact{
+    background-color: #0A031A;
+    color: #fff;
+}
+
 /* ----button---- */
 .action-btn{
     color: var(--f-col-grab) !important;

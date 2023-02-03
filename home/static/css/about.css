@@ -1,3 +1,11 @@
+.about-content{
+    min-height: 80vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Section Header line */
 .section-header{
     position: relative;
