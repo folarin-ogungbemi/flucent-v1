@@ -23,6 +23,13 @@ a{
     color: var(--f-col-light);
 }
 
+.page-center{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* ----button---- */
 .action-btn{
     color: var(--f-col-grab) !important;

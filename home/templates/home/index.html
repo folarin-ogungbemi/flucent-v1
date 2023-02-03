@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="{% static 'css/hero.css' %}">
     <link rel="stylesheet" href="{% static 'css/about.css' %}">
     <link rel="stylesheet" href="{% static 'css/projects.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -15,18 +16,10 @@
         {% include 'home/includes/about.html' %}
     </section>
     <section id="projects" class="container-fluid">
-        <div class="container">
-            {% include 'home/includes/projects.html' %}
-        </div>
+        {% include 'home/includes/projects.html' %}
     </section>
     <section id="contact" class="container-fluid">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2>Contact</h2>
-                </div>
-            </div>
-        </div>
+        {% include 'home/includes/contact.html' %}
     </section>
 {% endblock %}
 {% block post_load_js %}
@@ -34,4 +27,5 @@
     <script src="{% static 'js/hero.js' %}"></script>
     <script src="{% static 'js/about.js' %}"></script>
     <script src="{% static 'js/projects.js' %}"></script>
+    <script src="{% static 'js/contact.js' %}"></script>
 {% endblock %}

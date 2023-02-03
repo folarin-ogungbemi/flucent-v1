@@ -1,3 +1,7 @@
+.projects-content{
+    min-height: 80vh;
+}
+
 /* Technical Skills */
 .projects{
     display: flex;
@@ -41,10 +45,6 @@
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.projects-content{
-    height: 80vh;
 }
 
 .project-display .project {
