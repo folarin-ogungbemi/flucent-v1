@@ -58,7 +58,7 @@ a{
     position: relative;
     height: 3.5rem;
     width: 3.5rem;
-    background: rgba(237, 89, 89, 0.4);
+    background: rgba(237, 89, 89, 0.3);
     border-radius: 100%;
     font-size: 1.5rem;
 }
@@ -76,9 +76,13 @@ a{
     color: var(--f-col-light);
 }
 
-.nav-list a:hover,
 .social-icons .social-icon:hover {
     background-color: var(--f-col-grab);
+    transition: var(--trans-ease);
+}
+
+.nav-list a:hover{
+    color: var(--f-col-grab);
     transition: var(--trans-ease);
 }
 
