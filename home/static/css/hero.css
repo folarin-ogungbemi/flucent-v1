@@ -26,23 +26,15 @@
     font-size: 1.5rem;
 }
 
-/* Social icons style */
-.social-icons{
+/* Hero Social icons style */
+#hero .social-icons{
     margin-top: 4rem;
     gap: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.8rem;
-    
-}
-.social-icons a{
-    color: var(--f-col-light);
 }
 
-.social-icons a:hover{
-    color: var(--f-col-grab);
-}
 
 /* Underline hover effect */
 .underline-hover-effect{

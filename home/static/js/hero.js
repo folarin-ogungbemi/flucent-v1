@@ -13,7 +13,7 @@ let socialList =
     `<ul class="list-unstyled social-icons">`
     for (let link of socialLinks){
         let items =
-        `<li>
+        `<li class="social-icon">
             <a 
             href="${link[1]}"
             target="_blank"
