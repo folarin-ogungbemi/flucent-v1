@@ -215,3 +215,11 @@ header{
 .top-nav-list > div >div.is-active{
     left: 40%;
 }
+
+.footer-nav{
+    opacity: 0.7;
+}
+
+.footer-nav:hover{
+    color: var(--f-col-grab);
+}
