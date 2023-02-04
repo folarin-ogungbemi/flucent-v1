@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # summernote
     'django_summernote',
+    # crispy
+    'crispy_forms',
+    'crispy_bootstrap5',
     # local app
     'home',
 ]
@@ -74,6 +77,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'flucent_developer.wsgi.application'
 
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases

@@ -1,3 +1,4 @@
+{% load crispy_forms_tags %}
 <div class="container contact-content page-center">
     <div class="row">
         <div class="col-12">
@@ -18,7 +19,7 @@
                     <div class="contact-form mb-5">
                         <form method="POST" action="{% url 'home' %}">
                             {% csrf_token %}
-                            {{ form.as_p}}
+                            {{ form | crispy }}
                             <div class="d-flex justify-content-center my-2">
                                 <button class="action-btn" type="submit">Submit</button>
                             </div>
