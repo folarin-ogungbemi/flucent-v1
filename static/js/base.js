@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
 const navDict = {
     Home: "/",
     About: "/#about",
-    Projects: "#",
-    Contact: "#",
+    Projects: "/#projects",
+    Contact: "/#contact",
     Resume: "#",
 }
 

@@ -1,35 +1,29 @@
-document.addEventListener("DOMContentLoaded", ()=>{
-    heroGrandChild.appendChild(heroSocialList);
-})
+const socials = {
+    linkedin:'https://www.linkedin.com/in/folarin-ogungbemi/',
+    github:'https://github.com/folarin-ogungbemi',
+    twitter:'https://twitter.com/ftogungbemi'}
 
-socials = [
-    {linkedin:'https://www.linkedin.com/in/folarin-ogungbemi/'},
-    {github:'https://github.com/folarin-ogungbemi'},
-    {twitter:'https://twitter.com/ftogungbemi'},
-]
+// hero social links
+let heroSocialLinks = document.getElementsByClassName('hero-social-links')[0];
+// contact social links
+let contactSocialLinks = document.getElementsByClassName('contact')[0].children[0];
 
-let heroContent = document.getElementsByClassName('hero-content')[0];
-let heroChild = heroContent.children[0]
-let heroGrandChild = heroChild.children[0];
-
-// create hero social links Div element.
-let heroSocialList = document.createElement('ul');
-heroSocialList.className = "list-unstyled social-icons";
-
-// insert social links in hero social links Div element.
-for (let link of socials){
-    for (let i in link){
-        let socialLinks = `
-        <li>
+const socialLinks = Object.entries(socials);
+let socialList = 
+    `<ul class="list-unstyled social-icons">`
+    for (let link of socialLinks){
+        let items =
+        `<li>
             <a 
-            href="${link[i]}"
+            href="${link[1]}"
             target="_blank"
             class="social-icon"
             rel="noopener"
-            aria-label="visit folarin's ${i} page(open in a new tab)"
-            ><i class="fa-brands fa-${i}"></i></a>
-        </li>
-        `
-        heroSocialList.innerHTML += socialLinks;
+            aria-label="visit folarin's ${link[0]} page(open in a new tab)"
+            ><i class="fa-brands fa-${link[0]}"></i></a>
+        </li>`;
+        socialList += items;
     }
-}
+    socialList += `</ul>`;
+    heroSocialLinks.innerHTML += socialList;
+    contactSocialLinks.innerHTML += socialList;
