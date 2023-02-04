@@ -1,3 +1,10 @@
 from django.contrib import admin
+from home.models import Contact
+from django_summernote.admin import SummernoteModelAdmin
 
-# Register your models here.
+
+@admin.register(Contact)
+class ContactAdmin(SummernoteModelAdmin):
+    summernote_fields = ('content',)
+    list_display = ('full_name', 'email', 'messaged_on')
+    list_filter = ('email',)
