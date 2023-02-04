@@ -1,3 +1,21 @@
 .contact-content{
     min-height: 60vh;
 }
+
+.contact{
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    margin: auto;
+}
+
+.center-content{
+    width: 100vw;
+    height: fit-content;
+    margin: auto;
+}
+
+.asteriskField{
+    color: var(--f-col-grab);
+    padding-left: 0.2rem;
+}
