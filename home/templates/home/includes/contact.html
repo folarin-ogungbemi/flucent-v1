@@ -16,7 +16,13 @@
                     <!--message here-->
                     <p class="fs-5 text-center text-uppercase">Do you have an interesting project in mind ?</p>
                     <div class="contact-form mb-5">
-                        <!--form-->
+                        <form method="POST" action="{% url 'home' %}">
+                            {% csrf_token %}
+                            {{ form.as_p}}
+                            <div class="d-flex justify-content-center my-2">
+                                <button class="action-btn" type="submit">Submit</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
