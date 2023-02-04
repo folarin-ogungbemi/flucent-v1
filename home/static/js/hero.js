@@ -17,7 +17,6 @@ let socialList =
             <a 
             href="${link[1]}"
             target="_blank"
-            class="social-icon"
             rel="noopener"
             aria-label="visit folarin's ${link[0]} page(open in a new tab)"
             ><i class="fa-brands fa-${link[0]}"></i></a>
