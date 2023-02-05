@@ -222,3 +222,17 @@ header{
 .footer-nav:hover{
     color: var(--f-col-grab);
 }
+
+/* contact message */
+
+.contact-message{
+    background-color: rgba(10, 3, 26, 0.2);
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1.5px dashed var(--f-col-grab);
+}
+
+.contact-message i{
+    color: var(--f-col-grab);
+}

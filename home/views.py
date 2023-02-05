@@ -15,7 +15,7 @@ def index(request):
             messages.add_message(
                     request,
                     messages.SUCCESS,
-                    f'Thanks, I have receveid your message.')
+                    f'Thanks, I have received your message.')
             return redirect('home')
 
     context = {'form': contact_form}

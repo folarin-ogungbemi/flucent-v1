@@ -39,6 +39,20 @@
         </nav>
     </header>
 
+    {% if messages %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <ul class="contact-message list-unstyled">
+                    {% for message in messages %}
+                    <li><i class="fa-solid fa-thumbs-up me-2"></i>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
     <main>
         {% block content %}
         {% endblock %}
