@@ -10,11 +10,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
 });
 
+let skillBody = `
+    <div class="list-unstyled skill-body">`
 for (let skill of skills){
-    let skillHead = `
-    <ul class="list-unstyled skill-list">
-       <li class="skill-btn"><a href="#contact">${skill}</a></li>
-    </ul>`
-    technicalSkills.innerHTML += skillHead;
+    let skillItem =
+    `<a href="#projects" class="skill">${skill}</a>`
+    skillBody += skillItem;
 }
+skillBody +=`</div>`
+    technicalSkills.innerHTML += skillBody;
 

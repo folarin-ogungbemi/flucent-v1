@@ -31,14 +31,16 @@
 }
 
 /* Technical Skills */
-.technical-skills{
+.skill-body{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    width: 90%;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    width: 80%;
+    margin: auto;
 }
 
 .project-btn,
-.skill-btn{
+.skill{
     width: 140px;
     border: 2px solid rgba(237, 89, 89, 0.5);
     box-shadow: 0.5px 0.5px 1.5px 0.5px rgba(237, 89, 89, 0.5);
@@ -48,25 +50,23 @@
 }
 
 .project-btn a,
-.skill-btn a{
+.skill-body a{
     text-decoration: none;
     color: rgba(237, 89, 89, 0.5);
 }
 
 .project-btn:hover,
-.skill-btn:hover{
+.skill:hover{
     border: 2px solid var(--f-col-dark);
 }
 
-@media (max-width:600px){
-    .technical-skills{
-        width: 100vw;
-        grid-auto-flow: column;
-        gap: 0.5rem;
+@media (max-width:900px){
+    .skill-body{
+        width: 100%;
         overflow: scroll;
     }
     
-    .skill-btn{
+    .skill{
         width: 120px;
         padding: 3px 8px;
     }
