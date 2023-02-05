@@ -12,6 +12,11 @@
 }
 
 /* General */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body{
     background-color: #0A031A;
@@ -97,6 +102,7 @@ header{
 
 #top-nav a.logo{
     color: var(--f-col-light);
+    z-index: 99999999;
 }
 
 .nav-list{
