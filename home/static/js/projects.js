@@ -5,7 +5,7 @@ const projects = [
         image:"https://res.cloudinary.com/dzdyzl4r5/image/upload/v1673288665/gosip-bookstore-image_rgw5vs.png",
         github:"https://github.com/folarin-ogungbemi/Gosip-Bookstore",
         url:"https://flo-gosip.herokuapp.com/",
-        technology:["HTML", "CSS", "Javascript", "Django", "Swipe"]
+        technology:["HTML", "CSS", "Javascript", "Django", "Python", "Stripe", "Google Cloud", "Git", "Agile", "Heroku"]
     },
     {
         name:"Yabash",
@@ -13,7 +13,7 @@ const projects = [
         image:"https://res.cloudinary.com/dzdyzl4r5/image/upload/v1673288665/yabash-image_rz99ii.png",
         github:"https://github.com/folarin-ogungbemi/Yabash-GmbH",
         url:"https://flo-yabash.herokuapp.com/",
-        technology:["HTML", "CSS", "Javascript", "Django"]
+        technology:["HTML", "CSS", "Javascript", "Google Cloud", "Python", "Django", "Git", "Agile", "Heroku"]
     },
     {
         name:"Kologram",
@@ -21,7 +21,7 @@ const projects = [
         image:"https://res.cloudinary.com/dzdyzl4r5/image/upload/v1673288664/kologram_jnotgm.jpg",
         github:"https://github.com/folarin-ogungbemi/kologram",
         url:"https://flo-kologram.herokuapp.com/",
-        technology:["HTML", "CSS", "Python"]
+        technology:["Python", "Google Cloud", "Heroku", 'Git']
     },
     {
         name:"Twain Land",
@@ -29,7 +29,7 @@ const projects = [
         image:"https://res.cloudinary.com/dzdyzl4r5/image/upload/v1673288664/twain-land-image_thajte.jpg",
         github:"https://github.com/folarin-ogungbemi/twain-land",
         url:"https://folarin-ogungbemi.github.io/twain-land/",
-        technology:["HTML", "CSS", "Javascript"]
+        technology:["HTML", "CSS", "Javascript", 'Git']
     }
 ]
 
@@ -106,3 +106,19 @@ document.addEventListener('DOMContentLoaded', () =>{
     projectBtn[0].classList.add('active');
     projectContent[0].classList.add('active');
 })
+
+const projectNamer = document.querySelectorAll('.skill');
+const projectSkill = document.getElementsByClassName('project-skill')[0];
+for (let skill of projectNamer){
+    skill.addEventListener('click', ()=>{
+        let projectSkills = `<ul class="skill-info"> Some projects I have built with <strong>${skill.innerHTML}</strong> :`;
+        for (let project of projects){
+            if (project.technology.includes(skill.innerHTML)){
+                projectList = ` <li class="project-tech">${project.name}</li>`
+                projectSkills += projectList;
+            }
+        }
+        projectSkills += `</ul>`
+        projectSkill.innerHTML += projectSkills;
+    })
+}
