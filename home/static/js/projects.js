@@ -69,7 +69,7 @@ const projectInfo = projects.map(project => {
                             <h4 class="capitalize project-name">${project.name}</h4>
                             <p class="small">${project.description}</p>`;
                                 let projectTechList = 
-                                `<ul class="d-flex justify-content-start list-unstyled">`
+                                `<ul class="language-box">`
                                 for (let item of project.technology){
                                     let language = 
                                     `<li class="language me-2">${item}</li>`;

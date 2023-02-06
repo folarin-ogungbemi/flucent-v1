@@ -85,11 +85,21 @@
     opacity: 1;
 }
 
+.language-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    list-style: none;
+    width: 80%;
+    padding: 0;
+}
+
 .language{
     opacity: 0.7;
     position: relative;
     width: fit-content;
     padding-left: 0.5rem;
+    font-size: 0.9rem;
 }
 
 

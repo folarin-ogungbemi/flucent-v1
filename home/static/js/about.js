@@ -18,4 +18,3 @@ for (let skill of skills){
 }
 skillBody +=`</div>`
     technicalSkills.innerHTML += skillBody;
-
