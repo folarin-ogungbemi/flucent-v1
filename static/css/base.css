@@ -21,6 +21,7 @@
 body{
     background-color: #0A031A;
     color: #fff;
+    min-height: 100vh;
 }
 
 a{
@@ -91,18 +92,19 @@ a{
 }
 
 header{
+    position: fixed;
+    min-height: 5vh;
+    z-index: 99999;
     background-color: var(--f-col-dark);
 }
 
 #top-nav{
-    min-height: 70px;
     align-items: center;
     color: var(--f-col-light);
 }
 
 #top-nav a.logo{
     color: var(--f-col-light);
-    z-index: 99999999;
 }
 
 .nav-list{
@@ -162,10 +164,9 @@ header{
     position: fixed;
     backdrop-filter: blur(2px);
     width: 100%;
-    height: 100vh;
+    min-height: 200vh;
     top: 0;
     left: 100%;
-    z-index:1;
     transition: left 0.5s ease;
 }
 
@@ -174,9 +175,8 @@ header{
     top: 0;
     left: 100%;
     width: 100%;
-    height: 100vh;
+    min-height: 200vh;
     background-color: var(--f-col-dark);
-    z-index:1;
     transition: left 0.5s ease;
 }
 
@@ -185,7 +185,6 @@ header{
     width: 30%;
     text-align: center;
     left: 30%;
-    bottom: 60%;
     transform: translate(-40%, 30%);
 }
 
