@@ -24,7 +24,7 @@ const navDict = {
     About: "/#about",
     Projects: "/#projects",
     Contact: "/#contact",
-    Resume: "#",
+    Résumé: "#",
 }
 
 // create hamburger btn element

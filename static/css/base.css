@@ -107,6 +107,7 @@ header{
 
 .nav-list{
     margin: auto;
+    gap: 1rem;
 }
 
 .nav-list li{
@@ -120,10 +121,6 @@ header{
     margin: auto;
 }
 
-.nav-list li:last-child{
-    margin-left: 12rem;
-}
-
 /* Hamburger button */
 .hamburger-btn{
     width: 37px;
@@ -131,6 +128,7 @@ header{
     border: none;
     cursor: pointer;
     background: none;
+    padding: 0.25rem;
 }
 
 .hamburger-btn .hamburger-icon{
