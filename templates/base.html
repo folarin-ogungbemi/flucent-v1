@@ -39,8 +39,8 @@
         </nav>
     </header>
 
+    <div class="container message">
     {% if messages %}
-    <div class="container">
         <div class="row">
             <div class="col-12">
                 <ul class="contact-message list-unstyled">
@@ -50,8 +50,8 @@
                 </ul>
             </div>
         </div>
-    </div>
     {% endif %}
+    </div>
 
     <main>
         {% block content %}

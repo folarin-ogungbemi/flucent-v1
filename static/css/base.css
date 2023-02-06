@@ -231,6 +231,15 @@ header{
 
 /* contact message */
 
+.message.active{
+    display: none;
+}
+
+.message{
+    display: flex;
+    margin: auto;
+}
+
 .contact-message{
     background-color: rgba(10, 3, 26, 0.2);
     width: fit-content;
