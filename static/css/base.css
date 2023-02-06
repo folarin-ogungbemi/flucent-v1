@@ -236,8 +236,7 @@ header{
 }
 
 .message{
-    display: flex;
-    margin: auto;
+    display: block;
 }
 
 .contact-message{
