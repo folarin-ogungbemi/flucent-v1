@@ -109,6 +109,11 @@
 }
 
 .skill-info{
+    display: none;
+}
+
+.skill-info.active{
+    display: block;
     width: 66%;
     margin:auto;
     padding: 0;

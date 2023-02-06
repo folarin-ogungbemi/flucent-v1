@@ -5,7 +5,7 @@ const projects = [
         image:"https://res.cloudinary.com/dzdyzl4r5/image/upload/v1673288665/gosip-bookstore-image_rgw5vs.png",
         github:"https://github.com/folarin-ogungbemi/Gosip-Bookstore",
         url:"https://flo-gosip.herokuapp.com/",
-        technology:["HTML", "CSS", "Javascript", "Django", "Python", "Stripe", "Google Cloud", "Git", "Agile", "Heroku"]
+        technology:["HTML", "CSS", "Bootstrap", "Javascript", "Django", "Python", "postgreSQL", "Stripe", "Google Cloud", "Git", "Agile", "Heroku"]
     },
     {
         name:"Yabash",
@@ -13,7 +13,7 @@ const projects = [
         image:"https://res.cloudinary.com/dzdyzl4r5/image/upload/v1673288665/yabash-image_rz99ii.png",
         github:"https://github.com/folarin-ogungbemi/Yabash-GmbH",
         url:"https://flo-yabash.herokuapp.com/",
-        technology:["HTML", "CSS", "Javascript", "Google Cloud", "Python", "Django", "Git", "Agile", "Heroku"]
+        technology:["HTML", "CSS", "Bootstrap", "Javascript", "Google Cloud", "Python", "Django", "postgreSQL", "Git", "Agile", "Heroku"]
     },
     {
         name:"Kologram",
@@ -95,9 +95,11 @@ document.addEventListener('DOMContentLoaded', () =>{
     const projectContent = document.querySelectorAll('.project-content');
     projectBtn.forEach((project, item) => {
         project.addEventListener('click', () =>{
+
             // toggle project button
             projectBtn.forEach(project => project.classList.remove('active'));
             project.classList.add('active');
+
             // toggle project content to display
             projectContent.forEach(content => content.classList.remove('active'));
             projectContent[item].classList.add('active');
@@ -109,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 
 const projectNamer = document.querySelectorAll('.skill');
 const projectSkill = document.getElementsByClassName('project-skill')[0];
-for (let skill of projectNamer){
+projectNamer.forEach(skill=>{
     skill.addEventListener('click', ()=>{
         let projectSkills = `<ul class="skill-info"> Some projects I have built with <strong>${skill.innerHTML}</strong> :`;
         for (let project of projects){
@@ -120,5 +122,10 @@ for (let skill of projectNamer){
         }
         projectSkills += `</ul>`
         projectSkill.innerHTML += projectSkills;
-    })
-}
+        
+        // skill Information Display
+        const skillInfos = document.querySelectorAll('.skill-info');
+        skillInfos.forEach(info => info.classList.remove('active'));
+        skillInfos[skillInfos.length-1].classList.add('active');
+    });
+})

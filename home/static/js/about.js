@@ -1,6 +1,6 @@
 const skills = [
-    'HTML', 'CSS', 'Javascript', 'Python', 'Materialize', 'Stripe', 'Google Cloud',
-    'Bootstrap', 'Flask', 'Django', 'postgreSQL', 'Heroku', 'Git', 'Agile']
+    'HTML', 'CSS', 'Javascript', 'Python', 'Stripe', 'Google Cloud',
+    'Bootstrap', 'Django', 'postgreSQL', 'Heroku', 'Git', 'Agile']
 
 let technicalSkills = document.getElementsByClassName('technical-skills')[0];
 document.addEventListener('DOMContentLoaded', ()=>{
@@ -10,8 +10,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
 });
 
-let skillBody = `
-    <div class="list-unstyled skill-body">`
+let skillBody = `<div class="list-unstyled skill-body">`
 for (let skill of skills){
     let skillItem =
     `<a href="#projects" class="skill">${skill}</a>`
