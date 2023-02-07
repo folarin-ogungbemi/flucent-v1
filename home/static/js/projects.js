@@ -127,5 +127,8 @@ projectNamer.forEach(skill=>{
         const skillInfos = document.querySelectorAll('.skill-info');
         skillInfos.forEach(info => info.classList.remove('active'));
         skillInfos[skillInfos.length-1].classList.add('active');
+        setTimeout(()=>{
+            skillInfos[skillInfos.length-1].classList.remove('active');
+        },20000)
     });
 })
