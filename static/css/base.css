@@ -22,6 +22,8 @@ body{
     background-color: #0A031A;
     color: #fff;
     min-height: 100vh;
+    margin: 0 auto;
+    max-width: 1440px;
 }
 
 a{
@@ -29,8 +31,9 @@ a{
     color: var(--f-col-light);
 }
 
-.page-center{
+.section-center{
     width: 100vw;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,6 +97,7 @@ a{
 header{
     position: fixed;
     min-height: 5vh;
+    max-width: 1440px;
     z-index: 99999;
     background-color: var(--f-col-dark);
 }

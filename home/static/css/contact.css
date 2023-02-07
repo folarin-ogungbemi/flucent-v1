@@ -1,7 +1,3 @@
-.contact-content{
-    min-height: 60vh;
-}
-
 .contact{
     display: flex;
     justify-content: center;
