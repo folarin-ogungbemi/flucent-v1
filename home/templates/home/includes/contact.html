@@ -1,35 +1,32 @@
 {% load crispy_forms_tags %}
-<div class="container contact-content page-center">
+<div class="container contact-content section-center">
     <div class="row">
         <div class="col-12">
             <h2 class="text-center section-header">Get in touch</h2>
-            <div class="container center-content">
-                <div class="row">
-                    <div class="col-12 col-md-4 order-2 order-sm-2 order-md-1 contact">
-                        <div>
-                            <p><i class="fa-solid fa-location-dot me-2"></i>Berlin, Germany</p>
-                            <p><i class="fa-solid fa-phone me-2"></i>(49) 17682052388</p>
-                            <p><a href="mailto:ftogungbemi@gmail.com"><i class="fa-solid fa-envelope me-2"></i><span class="underline-hover-effect">ftogungbemi@gmail.com</span></a></p>
-                            <!--social links-->
-                        </div>
+            <div class="row">
+                <div class="col-12 col-md-4 order-2 order-sm-2 order-md-1 contact">
+                    <div>
+                        <p><i class="fa-solid fa-location-dot me-2"></i>Berlin, Germany</p>
+                        <p><i class="fa-solid fa-phone me-2"></i>(49) 17682052388</p>
+                        <p><a href="mailto:ftogungbemi@gmail.com"><i class="fa-solid fa-envelope me-2"></i><span class="underline-hover-effect">ftogungbemi@gmail.com</span></a></p>
+                        <!--social links-->
                     </div>
-                    <!--contact form-->
-                    <div class="col-12 col-md-8 order-1 order-sm-1 order-md-2 mt-5">
-                        <!--message here-->
-                        <p class="fs-5 text-center text-uppercase fw-semibold">Do you have an interesting project in mind ?</p>
-                        <div class="contact-form mb-5">
-                            <form method="POST" action="{% url 'home' %}">
-                                {% csrf_token %}
-                                <div class="row">
-                                    <div class="col-12 col-md-6">{{ form.full_name | as_crispy_field }}</div>
-                                    <div class="col-12 col-md-6">{{ form.email | as_crispy_field }}</div>
-                                    <div class="col-12">{{ form.content | as_crispy_field }}</div>
-                                </div>
-                                <div class="d-flex justify-content-start my-2">
-                                    <button class="action-btn" type="submit">Submit</button>
-                                </div>
-                            </form>
-                        </div>
+                </div>
+                 <!--contact form-->
+                <div class="col-12 col-md-8 order-1 order-sm-1 order-md-2 mt-5">
+                    <p class="fs-5 text-center text-uppercase fw-semibold">Do you have an interesting project in mind ?</p>
+                    <div class="contact-form mb-5">
+                        <form method="POST" action="{% url 'home' %}">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-12 col-md-6">{{ form.full_name | as_crispy_field }}</div>
+                                <div class="col-12 col-md-6">{{ form.email | as_crispy_field }}</div>
+                                <div class="col-12">{{ form.content | as_crispy_field }}</div>
+                            </div>
+                            <div class="d-flex justify-content-start my-2">
+                                <button class="action-btn" type="submit">Submit</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
