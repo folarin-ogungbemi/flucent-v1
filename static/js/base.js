@@ -64,3 +64,15 @@ hamburgerBtn.addEventListener('click', () => {
     mobileNavDivEl1.classList.toggle('is-active');
     mobileNavDivEl2.classList.toggle('is-active');
 })
+
+let topScroll = 0;
+window.addEventListener('scroll', ()=>{
+    const navBar = document.getElementsByTagName('header')[0];
+    let winScrolled = window.scrollY;
+    if (winScrolled > topScroll){
+        navBar.style.top = "-12vh";
+    } else {
+        navBar.style.top = "0";
+    }
+    topScroll = winScrolled;
+})

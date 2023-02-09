@@ -27,20 +27,16 @@ body{
 }
 
 header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 5vh;
     max-width: 1440px;
     z-index: 99999;
+    background-color: rgba(10, 3, 26, 0.9);
+    backdrop-filter: blur(30px);
+    transition: var(--trans-ease)
 }
-
-/* header.down-scroll-active{ */
-    /* display: none; */
-/* } */
-/*  */
-/* header.up-scroll-active{ */
-    /* display: block; */
-    /* min-height: 5vh; */
-    /* background-color: rgba(10, 3, 26, 0.7); */
-    /* backdrop-filter: blur(30px); */
-/* } */
 
 a{
     text-decoration: none;
