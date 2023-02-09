@@ -269,6 +269,7 @@ a{
     background-color:rgba(255, 255, 255, 0.5);
     border-radius: 100vw;
 }
+
 ::-webkit-scrollbar-thumb:hover{
     background-color:var(--f-col-light);
 }
