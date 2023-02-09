@@ -65,14 +65,13 @@ hamburgerBtn.addEventListener('click', () => {
     mobileNavDivEl2.classList.toggle('is-active');
 })
 
+// Style Navbar when page is scrolled
 let topScroll = 0;
 window.addEventListener('scroll', ()=>{
     const navBar = document.getElementsByTagName('header')[0];
     let winScrolled = window.scrollY;
-    if (winScrolled > topScroll){
-        navBar.style.top = "-12vh";
-    } else {
-        navBar.style.top = "0";
-    }
+    winScrolled > topScroll ? navBar.style.top = "-12vh" : navBar.style.top = "0";
     topScroll = winScrolled;
+    (winScrolled === 0) && (topScroll === 0) ? navBar.style.boxShadow = "none" 
+    : navBar.style.boxShadow ="0.5px 0.5px 30px 0.7px rgba(0, 0, 0, 0.8)";
 })

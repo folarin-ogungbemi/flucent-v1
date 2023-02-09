@@ -35,7 +35,7 @@ header{
     z-index: 99999;
     background-color: rgba(10, 3, 26, 0.9);
     backdrop-filter: blur(30px);
-    transition: var(--trans-ease)
+    transition: var(--trans-ease);
 }
 
 a{
