@@ -72,6 +72,7 @@ window.addEventListener('scroll', ()=>{
     let winScrolled = window.scrollY;
     winScrolled > topScroll ? navBar.style.top = "-12vh" : navBar.style.top = "0";
     topScroll = winScrolled;
+    // Add box shadow
     (winScrolled === 0) && (topScroll === 0) ? navBar.style.boxShadow = "none" 
-    : navBar.style.boxShadow ="0.5px 0.5px 30px 0.7px rgba(0, 0, 0, 0.8)";
+    : navBar.style.boxShadow ="0.5px 0.5px 30px 0.7px rgba(0, 0, 0, 0.6)";
 })

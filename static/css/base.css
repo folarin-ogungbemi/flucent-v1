@@ -242,6 +242,12 @@ a{
 
 .message{
     display: block;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    width: fit-content;
+    height: fit-content;
+    transform: translateX(-50%);
 }
 
 .contact-message{
