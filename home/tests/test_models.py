@@ -14,5 +14,6 @@ class TestContact(TestCase):
         message = Contact.objects.get(pk=self.contact.id)
         self.assertEqual(message, self.contact)
 
-    def test_contact_str(self):
-        self.assertEqual(str(self.contact.email), 'john.doe@email.com')
+    def test_contact_str_method_returns_email(self):
+        email = Contact.objects.create(email=self.contact.email)
+        self.assertEqual(str(email), 'john.doe@email.com')
