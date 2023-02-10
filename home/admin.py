@@ -6,5 +6,5 @@ from django_summernote.admin import SummernoteModelAdmin
 @admin.register(Contact)
 class ContactAdmin(SummernoteModelAdmin):
     summernote_fields = ('content',)
-    list_display = ('full_name', 'email', 'messaged_on')
+    list_display = ('name', 'email', 'messaged_on')
     list_filter = ('email',)

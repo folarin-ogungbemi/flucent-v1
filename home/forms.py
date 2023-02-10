@@ -3,10 +3,10 @@ from home.models import Contact
 
 
 class ContactForm(forms.ModelForm):
-    full_name = forms.CharField(
-        widget=forms.TextInput(attrs={'placeholder': 'John Doe'}))
+    name = forms.CharField(
+        widget=forms.TextInput(attrs={'placeholder': 'John'}))
     email = forms.CharField(
-        widget=forms.TextInput(attrs={'placeholder': 'john@doe.com'}))
+        widget=forms.TextInput(attrs={'placeholder': 'john@email.com'}))
 
     content = forms.CharField(
         label='Message',
@@ -19,6 +19,6 @@ class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
         fields = [
-            'full_name',
+            'name',
             'email',
             'content']

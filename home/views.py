@@ -11,7 +11,7 @@ def index(request):
     if request.method == "POST":
         contact_form = ContactForm(request.POST)
         if contact_form.is_valid():
-            name = contact_form.cleaned_data['full_name']
+            name = contact_form.cleaned_data['name']
             contact_form.save()
             messages.add_message(
                     request,

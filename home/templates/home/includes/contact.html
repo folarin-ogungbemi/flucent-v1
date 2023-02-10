@@ -19,7 +19,7 @@
                         <form method="POST" action="{% url 'home' %}">
                             {% csrf_token %}
                             <div class="row">
-                                <div class="col-12 col-md-6">{{ form.full_name | as_crispy_field }}</div>
+                                <div class="col-12 col-md-6">{{ form.name | as_crispy_field }}</div>
                                 <div class="col-12 col-md-6">{{ form.email | as_crispy_field }}</div>
                                 <div class="col-12">{{ form.content | as_crispy_field }}</div>
                             </div>

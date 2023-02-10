@@ -9,8 +9,8 @@ class TestViews(TestCase):
     def setUp(self):
         self.home_url = reverse('home')
         self.contact = Contact.objects.create(
-            full_name='john doe',
-            email='john.doe@email.com',
+            name='john',
+            email='john@email.com',
             content='message to developer'
         )
 
@@ -21,7 +21,7 @@ class TestViews(TestCase):
 
     def test_home_index_contact_POST(self):
         response = self.client.post(
-            self.home_url, {'full_name': 'john doe', 'email': 'john.doe@email.com', 'content': 'its a text'})
+            self.home_url, {'name': 'john', 'email': 'john@email.com', 'content': 'test'})
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, self.home_url)
 
