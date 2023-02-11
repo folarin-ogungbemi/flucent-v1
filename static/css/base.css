@@ -129,6 +129,10 @@ a{
     margin: auto;
 }
 
+.nav-link.link-is-active{
+    color: var(--f-col-grab);
+}
+
 /* Hamburger button */
 .hamburger-btn{
     width: 37px;
