@@ -6,7 +6,8 @@ class TestContact(TestCase):
     """Test contact model fields"""
     def setUp(self):
         self.contact = Contact()
-        self.contact.email = 'john.doe@email.com'
+        self.contact.name = 'john'
+        self.contact.email = 'john@email.com'
         self.contact.content = "hello developer"
         self.contact.save()
 
@@ -16,4 +17,4 @@ class TestContact(TestCase):
 
     def test_contact_str_method_returns_email(self):
         email = Contact.objects.create(email=self.contact.email)
-        self.assertEqual(str(email), 'john.doe@email.com')
+        self.assertEqual(str(email), 'john@email.com')

@@ -21,8 +21,9 @@ class TestViews(TestCase):
 
     def test_home_index_contact_POST(self):
         response = self.client.post(
-            self.home_url, {'name': 'john', 'email': 'john@email.com', 'content': 'test'})
+            self.home_url,
+            {
+                'name': 'john',
+                'email': 'john@email.com', 'content': 'test'})
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, self.home_url)
-
-
