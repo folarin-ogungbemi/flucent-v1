@@ -1,0 +1,30 @@
+.contact{
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    margin: auto;
+}
+
+.asteriskField{
+    color: var(--f-col-grab);
+    padding-left: 0.2rem;
+}
+
+.back-to-top{
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 1rem;
+    margin: 0.2rem;
+    margin-left: auto;
+    align-items: center;
+    justify-content: center;
+    background: rgba(237, 89, 89, 0.5);
+}
+
+.back-to-top:hover{
+    background: var(--f-col-grab);
+    transition: var(--trans-ease);
+}

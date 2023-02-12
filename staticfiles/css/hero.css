@@ -1,0 +1,60 @@
+.hero-content{
+    padding-top: 6.5rem;
+}
+
+.hero-content h1 .goal{
+    opacity: 0.65;
+}
+
+.hero-text{
+    font-weight: 500;
+    opacity: 0.85;
+}
+
+.hero-content h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--fs-xl);
+    font-weight: bold;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+/* Buttons */
+.btn-hero{
+    padding: 1em 2em;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Hero Social icons style */
+.hero-social-links .social-icons{
+    margin-top: 4rem;
+    gap: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Underline hover effect */
+.underline-hover-effect{
+    color: var(--f-col-grab);
+    position: relative;
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.underline-hover-effect::before{
+    position: absolute;
+    content: '';
+    background-color: var(--f-col-grab);
+    width: 0%;
+    height: 1.5px;
+    left: 0;
+    bottom: 0;
+    transition: var(--trans-ease);
+}
+
+.underline-hover-effect:hover::before{
+    width: 100%;
+}
