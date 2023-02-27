@@ -28,15 +28,16 @@
     border: 2px solid var(--f-col-dark);
 }
 
-@media (max-width:900px){
+@media (max-width:768px){
     .skill-body{
         width: 100%;
-        overflow: scroll;
     }
     
+    .project-btn,
     .skill{
         width: 120px;
-        padding: 3px 8px;
+        border: none;
+        box-shadow: none;
     }
 }
 
