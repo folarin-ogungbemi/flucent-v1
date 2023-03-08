@@ -1,8 +1,16 @@
 const projects = [
     {
+        name:"EmpowerEd",
+        description: "EmpowerEd is an educational platform developed with the aim to provide education resources to underprivileged children. The application has a range of features to make learning interactive, accessible and engaging for students while also allowing students to connect with mentors, and providing the avenue for parents to communicate conveniently with teachers. In summary, the Website aim to achieve the goal of creating an education enabled environment for students.",
+        image:"https://res.cloudinary.com/dzdyzl4r5/image/upload/v1678281658/homepage_mockup_hesaqx.jpg",
+        github:"https://github.com/folarin-ogungbemi/EmpowerEd",
+        url:"https://team4-empowered.herokuapp.com/",
+        technology:["HTML", "CSS", "Bootstrap", "Javascript", "Django", "Python", "postgreSQL", "Typescript", "React", "Google Cloud", "Git", "Agile", "Heroku"]
+    },
+    {
         name:"Gosip Bookstore",
         description: "Gosip Bookstore demonstrates the functionalities of an E-commerce website specifically with a B2C(Business to Customer) relationship. Buyers can view a list of books within the Bookstore, select an individual book from the list to view its details, choose to add the book to their wishlist for later purchase or decide to add the book to their shopping cart at a certain quantity from where they can proceed to checkout the Item(s) using a secure payment system Stripe.",
-        image:"https://res.cloudinary.com/dzdyzl4r5/image/upload/v1673288665/gosip-bookstore-image_rgw5vs.png",
+        image:"https://res.cloudinary.com/dzdyzl4r5/image/upload/v1678281803/mockup_qqz2bu.jpg",
         github:"https://github.com/folarin-ogungbemi/Gosip-Bookstore",
         url:"https://flo-gosip.herokuapp.com/",
         technology:["HTML", "CSS", "Bootstrap", "Javascript", "Django", "Python", "postgreSQL", "Stripe", "Google Cloud", "Git", "Agile", "Heroku"]
