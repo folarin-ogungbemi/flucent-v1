@@ -33,7 +33,7 @@ DEBUG = development
 if development:
     ALLOWED_HOSTS = ['localhost']
 else:
-    ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME', 'CUSTOM_HOSTNAME', 'www.folarin-ogungbemi.de')]
+    ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME', 'CUSTOM_HOSTNAME')]
 
 
 # Application definition
