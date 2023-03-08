@@ -90,7 +90,7 @@ const projectInfo = projects.map(project => {
                     </div> 
                 </div>
             </div>
-            <img class="img-fluid" src="${project.image}" alt="project mockup" />
+            <img class="img-fluid project-img" src="${project.image}" alt="project mockup" />
         </div>
     </div>`;
 

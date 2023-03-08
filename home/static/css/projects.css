@@ -98,15 +98,29 @@
     font-size: 0.9rem;
 }
 
+@media (max-width: 1000px){
+    .project-display .project .project-caption {
+        opacity: 1;
+    }
+    .project>img.project-img{
+        height: 500px !important;
+    }
+}
 
 @media (max-width: 600px){
+    .section-head{
+        margin-top: 3rem !important;
+    }
     .project-display .project .project-caption {
-        overflow: scroll;
         opacity: 1;
     }
 
     .project-caption-content a{
     font-size: 1rem;
+    }
+    
+    .project>img.project-img{
+        height: 600px !important;
     }
 
     .language{
