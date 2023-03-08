@@ -2,7 +2,7 @@
 
 :root{
     /* typograpyh */
-    --fs-xl: clamp(1.6rem, 7vw, 3.6rem);
+    --fs-xl: clamp(2rem, 8vw, 4rem);
     /* colors */
     --f-col-dark: #0a031a;
     --f-col-grab: #ED5959;
