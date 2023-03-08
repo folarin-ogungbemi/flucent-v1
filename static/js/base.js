@@ -84,10 +84,12 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburgerIcon.classList.toggle('is-active');
         mobileNavDivEl1.classList.toggle('is-active');
         mobileNavDivEl2.classList.toggle('is-active');
+        document.body.style.overflow = 'hidden';
     }
     hamburgerBtn.addEventListener('click', () => OffCanvasToggler());
-    mobileNavlistEl.querySelectorAll('.nav-item').forEach(nav => nav.onclick = OffCanvasToggler);
+    // mobileNavlistEl.querySelectorAll('.nav-item').forEach(nav => nav.onclick = OffCanvasToggler);
     mobileNavDivEl1.addEventListener('click', () => {
+        document.body.style.overflow = 'scroll';
         mobileNavDivEl1.classList.remove('is-active')
         mobileNavDivEl2.classList.remove('is-active');
         hamburgerIcon.classList.remove('is-active');
