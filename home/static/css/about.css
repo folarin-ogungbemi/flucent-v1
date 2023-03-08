@@ -30,14 +30,36 @@
 
 @media (max-width:768px){
     .skill-body{
-        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(5.8rem, 1fr));
+        margin-left: 0;
     }
     
-    .project-btn,
     .skill{
         width: 120px;
         border: none;
         box-shadow: none;
+        text-align:justify;
+        position: relative;
+        padding: 0 0 0 0.7rem;
+    }
+
+    .skill::before{
+    content: '';
+    height: 5px;
+    width: 5px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-color: var(--f-col-grab);
+    padding-right: 0.5rem;
+    
+    /* https://www.cssportal.com/css-clip-path-generator/ */
+    -webkit-clip-path: polygon(0 0, 100% 50%, 3% 98%, 0% 100%, 25% 50%, 0% 0%);
+    clip-path: polygon(0 0, 100% 50%, 3% 98%, 0% 100%, 25% 50%, 0% 0%);
+    }
+
+    .about-me{
+        margin-top: 0 !important;
     }
 }
 
