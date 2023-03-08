@@ -295,8 +295,13 @@ a{
 }
 
 @media (max-width:900px){
+    .section-center{
+        min-height: fit-content;
+        margin-top: 2rem;
+    }
+
     .message{
-        top: 12vh;
+        top: 10vh;
         width:95%;
     }
     .contact-message{

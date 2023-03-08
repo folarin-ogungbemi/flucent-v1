@@ -43,6 +43,10 @@
         padding: 0 0 0 0.7rem;
     }
 
+    a.skill{
+        color: var(--f-col-light);
+    }
+
     .skill::before{
     content: '';
     height: 5px;
