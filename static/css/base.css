@@ -3,7 +3,6 @@
 :root{
     /* typograpyh */
     --fs-xl: clamp(2rem, 8vw, 4rem);
-    --fs-l: clamp(1.8rem, 4vw, 3rem);
     /* colors */
     --f-col-dark: #0a031a;
     --f-col-grab: #ED5959;
@@ -43,11 +42,10 @@ a{
 }
 
 .section-head{
-    font-size: var(--fs-l);
+    font-size: 2.5rem;
 }
 
 .section-center{
-    width: 100%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
