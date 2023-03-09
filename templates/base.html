@@ -11,6 +11,7 @@
     {% endblock %}
 
     {% block icon %}
+    <link rel="icon" type="image/png" href="{% static 'images/favicon.ico' %}">
     {% endblock %}
 
     {% block core_css %}
@@ -33,7 +34,9 @@
     <header class="container-fluid">
         <nav id="top-nav" class="row py-3 mx-1">
             <div class="col-6">
-                <a href="{% url 'home' %}" class="text-decoration-none logo">flucent</a>
+                <a href="{% url 'home' %}" class="text-decoration-none logo">
+                    <img src="{% static 'images/flucent_developer_head_logo.png' %}" width="50" height="50" alt="logo">
+                </a>
             </div>
             <div class="col-6 top-nav-list"></div>
         </nav>
