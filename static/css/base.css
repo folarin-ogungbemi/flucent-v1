@@ -18,6 +18,10 @@
     box-sizing: border-box;
 }
 
+.text-grab{
+    color: var(--f-col-grab);
+}
+
 body{
     background-color: var(--f-col-dark);
     color: var(--f-col-light);

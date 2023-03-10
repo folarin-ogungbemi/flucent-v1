@@ -128,15 +128,19 @@
     }
 }
 
-.skill-info{
+.projects-content .project-skill{
     display: none;
 }
 
-.skill-info.active{
+.projects-content .project-skill.active{
     display: block;
-    width: 66%;
-    margin:auto;
-    padding: 0;
+    text-align: center;
+}
+
+.skill-info{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .project-tech{
