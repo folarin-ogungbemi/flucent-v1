@@ -26,3 +26,31 @@ let socialList =
     socialList += `</ul>`;
     heroSocialLinks.innerHTML += socialList;
     contactSocialLinks.innerHTML += socialList;
+
+const parArray = ["I communicate efficiently with the web majorly through Javascript and Python to design and build aesthetic websites that exhibits an amazing digital experience."]
+const typedTextSpan = document.querySelector('.typed-text');
+const heroSpan = `<span class="hero-text">I communicate efficiently with the web majorly through <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript" class="underline-hover-effect">Javascript</a> and <a href="https://www.python.org" class="underline-hover-effect">Python</a> to design and build aesthetic websites that exhibits an amazing digital experience.</span>`;
+const cursorSpan = document.querySelector('.cursor');
+const heroSpanFunc = () =>{
+    typedTextSpan.innerHTML = heroSpan;
+}
+
+let parArrayIndex = 0;
+let charIndex = 0;
+
+function type(){
+    if (charIndex < parArray[parArrayIndex].length){
+        if (!cursorSpan.classList.contains('typing')) cursorSpan.classList.add('typing');
+        typedTextSpan.textContent += parArray[parArrayIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, 100);
+    }
+    else{
+        setTimeout(heroSpanFunc, 1000);
+        cursorSpan.classList.remove('cursor');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+    setTimeout(type, 2000)
+})

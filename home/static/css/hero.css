@@ -57,3 +57,21 @@
 .underline-hover-effect:hover::before{
     width: 100%;
 }
+
+/* cursor */
+.hero-content .cursor {
+    display: inline;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink{
+    0% { background:var(--f-col-grab) ;}
+    49% { background:var(--f-col-grab);}
+    50% { background:transparent;}
+    99% { background:transparent;}
+    100% { background:var(--f-col-grab);}
+}
+
+.hero-content .cursor.typing {
+    animation: none;
+}
