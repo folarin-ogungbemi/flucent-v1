@@ -121,7 +121,7 @@ const projectNamer = document.querySelectorAll('.skill');
 const projectSkill = document.getElementsByClassName('project-skill')[0];
 projectNamer.forEach(skill=>{
     skill.addEventListener('click', ()=>{
-        let projectSkillsText = `<span class="mb-1 text-grab">Projects I have built with <strong>${skill.innerHTML}</strong></span>`;
+        let projectSkillsText = `<span class="mb-1 text-grab skill-info-head">Projects I have built with <strong>${skill.innerHTML}</strong></span>`;
         let projectSkills = `<ul class="skill-info list-unstyled">`;
         for (let project of projects){
             if (project.technology.includes(skill.innerHTML)){
@@ -133,11 +133,16 @@ projectNamer.forEach(skill=>{
         projectSkill.innerHTML += projectSkillsText;
         projectSkill.innerHTML += projectSkills;
         
-        // projectSkill Information Display
-        projectSkill.classList.remove('active');
-        projectSkill.classList.add('active');
+        // skill Information Display
+        const SkillHeadInfos = document.querySelectorAll('.skill-info-head');
+        const skillInfos = document.querySelectorAll('.skill-info');
+        SkillHeadInfos.forEach(span => span.classList.remove('active'));
+        skillInfos.forEach(info => info.classList.remove('active'));
+        SkillHeadInfos[SkillHeadInfos.length-1].classList.add('active');
+        skillInfos[skillInfos.length-1].classList.add('active');
         setTimeout(()=>{
-            projectSkill.classList.remove('active');
-        },200000)
+            SkillHeadInfos[SkillHeadInfos.length-1].classList.remove('active');
+            skillInfos[skillInfos.length-1].classList.remove('active');
+        },20000)
     });
 })

@@ -128,16 +128,20 @@
     }
 }
 
-.projects-content .project-skill{
+.projects-content .skill-info-head{
     display: none;
 }
 
-.projects-content .project-skill.active{
+.projects-content .skill-info-head.active{
     display: block;
     text-align: center;
 }
 
 .skill-info{
+    display: none;
+}
+
+.skill-info.active{
     display: flex;
     justify-content: center;
     gap: 1rem;
