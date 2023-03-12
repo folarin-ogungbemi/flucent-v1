@@ -52,5 +52,5 @@ function type(){
 }
 
 document.addEventListener('DOMContentLoaded', function(){
-    setTimeout(type, 2000)
+    setTimeout(type, 6000)
 })
