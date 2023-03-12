@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block extra_css %}
+{% endblock %}
+
+{% block content %}
+<section id="blog" class="container-fluid">
+    <div class="container section-center">
+        <div class="row">
+            <div class="col-12">
+                testing this blog page
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block post_load_js %}
+    {{ block.super }}
+{% endblock %}

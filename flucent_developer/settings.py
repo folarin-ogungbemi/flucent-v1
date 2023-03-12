@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'storages',
     # local app
     'home',
+    'blog',
 ]
 
 MIDDLEWARE = [
