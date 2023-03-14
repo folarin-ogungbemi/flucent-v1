@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         About: "/#about",
         Projects: "/#projects",
         Contact: "/#contact",
-        Résumé: "#",
+        Résumé: "https://drive.google.com/uc?export=download&id=11TEeafJa7SFGcRgVaGiCV6pRGX3rxUed",
     }
 
     // CREATING TOP NAVLIST ELEMENT

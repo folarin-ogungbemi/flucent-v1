@@ -408,4 +408,17 @@ a{
         opacity: 1;
         transform: translateX(0);
     }
-}       
+}    
+
+.page-load{
+    opacity: 0;
+    display: none;
+    transform: scale(0);
+}
+
+.page-load.display{
+    opacity: 1;
+    display: block;
+    transform: scale(1);
+    transition: all 2s ease-out;
+}
