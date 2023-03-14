@@ -53,8 +53,13 @@ document.addEventListener('DOMContentLoaded', () => {
     topNav.children[1].appendChild(mobileNavDivEl1);
 
     // STYLE NAVBAR RESUME BUTTON
-    document.getElementsByTagName('li')[4].className = 'action-btn';
-    document.getElementsByTagName('li')[9].className = 'action-btn';
+    const icon = `<i class="fa-solid fa-download pt-1"></i>`
+    const navbarResume1 = document.getElementsByTagName('li')[4];
+    const navbarResume2 = document.getElementsByTagName('li')[9];
+    navbarResume1.className = 'action-btn d-flex gap-2';
+    navbarResume2.className = 'action-btn d-flex gap-2';
+    navbarResume1.innerHTML += icon;
+    navbarResume2.innerHTML += icon;
 
     // ACTIVE LINK LISTENER SYSTEM
     const navLinks = document.querySelectorAll('.nav-link');

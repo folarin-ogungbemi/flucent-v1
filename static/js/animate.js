@@ -7,7 +7,6 @@ const developer = document.querySelector('.developer');
 
 let MainPageDelay = document.querySelectorAll('.page-load');
 MainPageDelay.forEach(page => {
-    console.log(page);
     setTimeout(() => {
         page.classList.add('display');
 }, pageDelay);
