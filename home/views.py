@@ -16,6 +16,9 @@ def index(request):
                     messages.SUCCESS,
                     f'Thanks {name}, I have received your message.')
             return redirect('home')
+        contact_form = ContactForm()
+        messages.add_message(
+            request, messages.ERROR, 'Invalid! message could not be submitted')
 
     context = {'form': contact_form}
     return render(request, 'home/index.html', context)

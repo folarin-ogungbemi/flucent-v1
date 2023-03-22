@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         About: "/#about",
         Projects: "/#projects",
         Contact: "/#contact",
-        Résumé: "https://drive.google.com/uc?export=download&id=11TEeafJa7SFGcRgVaGiCV6pRGX3rxUed",
+        Résumé: "https://res.cloudinary.com/dzdyzl4r5/image/upload/v1679430764/resume_wsu6dq.pdf",
     }
 
     // CREATING TOP NAVLIST ELEMENT
@@ -73,16 +73,22 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks[5].classList.add('link-is-active');
 
     // NAVBAR DYNAMIC SYSTEM
-    let topScroll = 0;
+    let prevScrollpos = window.pageYOffset;
     const navBar = document.getElementsByTagName('header')[0];
-    window.addEventListener('scroll', ()=>{
-        let winScrolled = window.scrollY;
-        winScrolled > topScroll ? navBar.style.top = "-12vh" : navBar.style.top = "0";
-        topScroll = winScrolled;
+
+    window.addEventListener('scroll', () => {
+        let currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos || currentScrollPos === 0) {
+            navBar.style.top = "0";
+        } else {
+            navBar.style.top = `-${navBar.offsetHeight}px`;
+        }
+        prevScrollpos = currentScrollPos;
+
         /* Add box shadow to navbar */
-        (winScrolled === 0) && (topScroll === 0) ? navBar.style.boxShadow = "none" 
+        currentScrollPos === 0 ? navBar.style.boxShadow = "none" 
         : navBar.style.boxShadow ="0.5px 0.5px 30px 0.7px rgba(0, 0, 0, 0.6)";
-    })
+    });
 
     // OFFCANVAS DYNAMIC SYSTEM
     const OffCanvasToggler = () =>{
@@ -92,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = 'hidden';
     }
     hamburgerBtn.addEventListener('click', () => OffCanvasToggler());
-    // mobileNavlistEl.querySelectorAll('.nav-item').forEach(nav => nav.onclick = OffCanvasToggler);
+    mobileNavlistEl.querySelectorAll('.nav-item').forEach(nav => nav.onclick = OffCanvasToggler);
     mobileNavDivEl1.addEventListener('click', () => {
         document.body.style.overflow = 'scroll';
         mobileNavDivEl1.classList.remove('is-active')

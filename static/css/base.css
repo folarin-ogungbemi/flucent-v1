@@ -25,7 +25,7 @@
 body{
     background-color: var(--f-col-dark);
     color: var(--f-col-light);
-    min-height: 100vh;
+    min-height: 100svh;
     margin: 0 auto;
     overflow-x: hidden !important;
 }
@@ -34,11 +34,10 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    min-height: 5vh;
+    min-height: 5svh;
     z-index: 999;
     background-color: rgba(10, 3, 26, 0.9);
     backdrop-filter: blur(30px);
-    transition: var(--trans-ease);
 }
 
 a{
@@ -51,7 +50,7 @@ a{
 }
 
 .section-center{
-    min-height: 100vh;
+    min-height: 100svh;
     display: grid;
     place-items: center;
     justify-content: center;
@@ -249,11 +248,12 @@ a{
 
 /* contact message */
 
-.message.active{
-    display: none;
+.notification{
+    opacity: 0;
 }
 
-.message{
+.notification.display{
+    opacity: 1;
     display: block;
     position: absolute;
     top: 14vh;
@@ -263,8 +263,17 @@ a{
     transform: translateX(-50%);
 }
 
+.notification.display{
+    opacity: 1;
+    display: block;
+    position: fixed;
+    bottom: 2%;
+    left: 3%;
+    z-index: 9999999999999;
+}
+
 .contact-message{
-    background-color: rgba(10, 3, 26, 0.2);
+    background-color: var(--f-col-dark);
     width: fit-content;
     padding: 1rem;
     border-radius: 5px;
@@ -306,10 +315,14 @@ a{
         margin-top: 2rem;
     }
 
-    .message{
-        top: 10vh;
-        width:95%;
+    .notification.display{
+        top: 10%;
+        left: 50%;
+        width: 80%;
+        height: fit-content;
+        transform: translateX(-50%);
     }
+    
     .contact-message{
         background-color: var(--f-col-dark);
         color: var(--f-col-light);
@@ -342,7 +355,7 @@ a{
 .preload.start{
     position: fixed;
     background-color: #0a031a;
-    min-height: 110vh;
+    min-height: 100svh;
     width: 100%;
     display: grid;
     place-items: center;
@@ -412,13 +425,9 @@ a{
 
 .page-load{
     opacity: 0;
-    display: none;
-    transform: scale(0);
 }
 
 .page-load.display{
     opacity: 1;
-    display: block;
-    transform: scale(1);
-    transition: all 2s ease-out;
+    transition: all 1s ease-out;
 }
