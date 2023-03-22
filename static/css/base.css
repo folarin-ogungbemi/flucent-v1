@@ -302,9 +302,9 @@ a{
 @media (max-width:400px){
     .notification.display{
         top: 10svh;
-        left: 3%;
+        left: 50%;
         width: 80%;
-        height: fit-content;
+        z-index: 9999999999999;
         transform: translateX(-50%);
     }
 }
