@@ -255,17 +255,6 @@ a{
 .notification.display{
     opacity: 1;
     display: block;
-    position: absolute;
-    top: 14vh;
-    left: 50%;
-    width: fit-content;
-    height: fit-content;
-    transform: translateX(-50%);
-}
-
-.notification.display{
-    opacity: 1;
-    display: block;
     position: fixed;
     bottom: 2%;
     left: 3%;
@@ -309,20 +298,23 @@ a{
     }
 }
 
+
+@media (max-width:400px){
+    .notification.display{
+        top: 10svh;
+        left: 3%;
+        width: 80%;
+        height: fit-content;
+        transform: translateX(-50%);
+    }
+}
+
 @media (max-width:900px){
     .section-center{
         min-height: fit-content;
         margin-top: 2rem;
     }
 
-    .notification.display{
-        top: 10%;
-        left: 50%;
-        width: 80%;
-        height: fit-content;
-        transform: translateX(-50%);
-    }
-    
     .contact-message{
         background-color: var(--f-col-dark);
         color: var(--f-col-light);
