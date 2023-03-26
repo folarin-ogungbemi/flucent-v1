@@ -45,13 +45,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # summernote
-    'django_summernote',
-    # crispy
-    'crispy_forms',
-    'crispy_bootstrap5',
     # django-storages
     'storages',
+
+    # ext-apps
+    'ckeditor',
+    'django_summernote',
+    'crispy_forms',
+    'crispy_bootstrap5',
+
     # local app
     'home',
     'blog',
@@ -73,7 +75,9 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'templates'),],
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'ckeditor_templates')
+            ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -95,6 +99,8 @@ MESSAGE_TAGS = {
 }
 
 WSGI_APPLICATION = 'flucent_developer.wsgi.application'
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
 
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
@@ -157,20 +163,20 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
-if 'USE_AWS' in os.environ:
+# if 'USE_AWS' in os.environ:
 
-    AWS_STORAGE_BUCKET_NAME = 'folarin-ogungbemi'
-    AWS_S3_REGION_NAME = 'eu-central-1'
-    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+#     AWS_STORAGE_BUCKET_NAME = 'folarin-ogungbemi'
+#     AWS_S3_REGION_NAME = 'eu-central-1'
+#     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+#     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+#     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 
-    # static files
-    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
-    STATICFILES_LOCATION = 'static'
+#     # static files
+#     STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+#     STATICFILES_LOCATION = 'static'
 
-    # Override static and media URLS in production
-    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+#     # Override static and media URLS in production
+#     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
