@@ -23,9 +23,10 @@ class Post(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     image = models.ImageField(
-        upload_to='post_images', blank=True,
+        upload_to='media/post_images/', blank=True,
         null=True, default="placeholder")
     categories = models.ManyToManyField(Category)
+    excerpt = models.CharField(max_length=254, blank=True)
     content = RichTextField()
     views = models.IntegerField(
         default=0, validators=[MinValueValidator(0)])
@@ -39,8 +40,14 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-    def get_absolute_url(self):
+    def get_detail_absolute_url(self):
         return reverse('post_detail', args=[str(self.slug)])
+
+    def get_update_absolute_url(self):
+        return reverse('update_post', args=[str(self.slug)])
+
+    def get_delete_absolute_url(self):
+        return reverse('delete_post', args=[str(self.slug)])
 
 
 class Like(models.Model):
