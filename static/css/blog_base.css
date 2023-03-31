@@ -69,6 +69,7 @@ body {
     background-color: var(--col-pry);
     padding: 0.2rem 1rem 0.2rem 1rem;
     color: var(--col-light);
+    min-height: fit-content;
     position: absolute;
     top: 0;
     right: -1%;
@@ -240,5 +241,12 @@ body {
     }
     .navbar-toggler{
         margin-right: -1rem !important;
+    }
+}
+
+@media screen and (max-width: 576px)  {
+    .article-category{
+        bottom: 0;
+        right: -1%;
     }
 }
