@@ -23,7 +23,7 @@ class Post(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     image = models.ImageField(
-        upload_to='media/post_images/', blank=True,
+        upload_to='post_images/', blank=True,
         null=True, default="placeholder")
     categories = models.ManyToManyField(Category)
     excerpt = models.CharField(max_length=254, blank=True)

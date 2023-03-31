@@ -8,7 +8,9 @@
     --col-pry:#131d31;
     --col-sec:#363e3fb3;
     --box-shadow: 0px 0px 3px 0.2px rgba(0, 0, 0, 0.2);
-    --box-shadow-hov: 0px 0px 3px 0.2px rgba(0, 0, 0, 0.5);
+    --box-shadow-1: 0px 0px 3px 0.2px rgba(0, 0, 0, 0.5);
+    --box-shadow-2: 0px 0px 3px 0.2px rgba(0, 0, 0, 0.7);
+    --box-shadow-3: 0px 0px 2px 1px rgba(0, 0, 0, 0.5);
 }
 
 * {
@@ -56,7 +58,7 @@ body {
 
 .article-card img:hover,
 .article-card:hover {
-    box-shadow: var(--box-shadow-hov);
+    box-shadow: var(--box-shadow-1);
 }
 
 .article-card img{
@@ -102,7 +104,7 @@ body {
 }
 
 .search-button:hover{
-    box-shadow: var(--box-shadow-hov);
+    box-shadow: var(--box-shadow-3);
     background-color: var(--col-pry);
 }
 
@@ -193,7 +195,7 @@ body {
 }
 
 .post-attach:hover {
-    box-shadow: var(--box-shadow-hov);
+    box-shadow: var(--box-shadow-1);
 }
 
 .post-attach a {
@@ -228,7 +230,6 @@ body {
 /* *************
     MEDIA-QUERIES
 **************** */
-
 @media screen and (max-width: 992px)  {
     .navbar-brand{
         margin-left: 1rem !important;
