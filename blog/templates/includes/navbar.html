@@ -1,0 +1,70 @@
+{% load static %}
+<nav class="navbar top-navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+        <div class="row w-100"> 
+            <div class="col-12 col-lg-3 nav d-flex justify-content-between">
+                <!--logo-->
+                <a class="navbar-brand ms-5" href="{% url 'blog' %}">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" zoomAndPan="magnify" viewBox="0 0 375 374.999991" height="40" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><g/></defs><rect x="-37.5" width="450" fill="#ffffff00" y="-37.499999" height="449.999989" fill-opacity="1"/><rect x="-37.5" width="450" fill="#0a031a00" y="-37.499999" height="449.999989" fill-opacity="1"/><g fill="#131d31" fill-opacity="1"><g transform="translate(15.209794, 306.7433)"><g><path d="M 143.761719 -145.917969 L 47.101562 -145.917969 L 47.101562 -201.636719 L 116.980469 -201.636719 L 116.980469 -246.277344 L 3.386719 -246.277344 C 1.539062 -246.277344 0 -244.738281 0 -243.503906 L 0 -2.769531 C 0 -1.539062 1.539062 0 3.386719 0 L 47.101562 0 L 47.101562 -101.28125 L 143.761719 -101.28125 C 145.609375 -101.28125 147.148438 -102.820312 147.148438 -104.050781 L 147.148438 -143.148438 C 147.148438 -144.6875 145.609375 -145.917969 143.761719 -145.917969 Z M 143.761719 -145.917969 "/></g></g></g><g fill="#131d31" fill-opacity="1"><g transform="translate(169.747711, 306.7433)"><g><path d="M 43.714844 -246.277344 L 3.386719 -246.277344 C 1.539062 -246.277344 0 -244.738281 0 -243.503906 L 0 -146.84375 L 47.101562 -146.84375 L 47.101562 -201.332031 C 100.664062 -204.101562 140.378906 -181.628906 140.378906 -123.136719 C 140.378906 -47.101562 76.960938 -44.023438 47.101562 -45.253906 L 47.101562 -99.433594 L 0 -99.433594 L 0 -2.769531 C 0 -1.539062 1.539062 0 3.386719 0 L 43.714844 0 C 104.976562 0 187.785156 -17.855469 187.785156 -123.136719 C 187.785156 -232.421875 103.742188 -246.277344 43.714844 -246.277344 Z M 43.714844 -246.277344 "/></g></g></g></svg>
+                </a>
+                <div class="d-flex gap-3 d-lg-none">
+                    <!--Hamburger Button-->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <!-- Internal Nav items-->
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <div class="row w-100">
+                        <div class="col-8 d-flex justify-content-around nav-internal-links">
+                            <div>
+                                <ul class="list-unstyled navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" target="_blank" href="https://folarin-ogungbemi.herokuapp.com">Author</a>
+                                    </li>
+                                </ul>
+                                <!-- User Authentication Mobile-->
+                                <ul class=" list-unstyled d-block d-lg-none">
+                                    {% if user.is_authenticated %}
+                                        <li class="nav-item">
+                                            <a class="nav-link f-link" href="#">Logout</a>
+                                        </li>
+                                    {% else %}
+                                        <li class="nav-item">
+                                            <a class="nav-link f-link" href="#">Sign Up</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link f-link" href="#">Login</a>
+                                        </li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-4 d-none d-lg-flex justify-content-end">
+                            <ul class="navbar-nav gap-2">
+                                <!-- User Authentication -->
+                                {% if user.is_authenticated %}
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Logout</a>
+                                    </li>
+                                {% else %}
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Sign Up</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Login</a>
+                                    </li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
