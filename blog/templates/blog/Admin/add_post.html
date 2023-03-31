@@ -1,0 +1,48 @@
+{% extends 'blog_base.html' %}
+{% load crispy_forms_tags %}
+
+{% block extra_css %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h3 class="text-center text-uppercase my-5">add post</h3>
+    <div class="row">
+        <div class="col-8">
+            <h5 class="text-center my-5">add post</h5>
+            <form action="{% url 'add_post' %}" method="POST">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-12">
+                        {{ form.image | as_crispy_field}} 
+                    </div>
+                    <div class="col-12 col-md-6">
+                        {{ form.title | as_crispy_field}}
+                    </div>
+                    <div class="col-12 col-md-6">
+                        {{ form.author | as_crispy_field}}
+                    </div>
+                    <div class="col-12 col-md-6">
+                        {{ form.excerpt | as_crispy_field}}
+                    </div>
+                    <div class="col-12 col-md-6">
+                        {{ form.categories | as_crispy_field}}
+                    </div>
+                    <div class="col-md-12">
+                        {{ form.content | as_crispy_field }}
+                        {{ form.media }}
+                    </div>
+                    <div class="col-12">
+                        {{ form.published | as_crispy_field}}
+                    </div>
+                </div>
+                <input type="submit">
+            </form>
+        </div>
+        <h5 class="text-center my-5">add post</h5>
+        <div class="col-4">
+
+        </div>
+    </div>
+</div>
+{% endblock %}
