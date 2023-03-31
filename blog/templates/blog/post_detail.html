@@ -1,0 +1,69 @@
+{% extends 'blog_base.html' %}
+{% load static %}
+
+{% block extra_css %}
+{% endblock %}
+
+{% block extra_title %} {{ post.title }} Post {% endblock %}
+{% block content %}
+
+<div class="post-featured-image container-fluid">
+    <canvas class="background"></canvas>
+    <p class="post-title fw-semibold">{{ post.title }}</p>
+</div>
+<section class="blog-post container">
+    <div class="row">
+        <div class="col-12 col-md-3 d-none d-md-block">
+            <nav class="table_of_content my-5">
+                <p class="py-2 toc">Table of Content</p>
+                <ul class="list-unstyled">
+                    <li class="toc-link"><a class="text-decoration-none action-link" href="#intro">intro</a></li>
+                    <li class="toc-link"><a class="text-decoration-none action-link" href="#body">body</a></li>
+                    <li class="toc-link"><a class="text-decoration-none action-link" href="#conclusion">conclusion</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-12 col-md-9">
+            <div class="post-content my-5">
+                <div class="row">
+                    <div class="col-12 d-flex gap-3">
+                        <img class="profile-img" width="100" height="100" src="https://res.cloudinary.com/dzdyzl4r5/image/upload/v1680209621/Profile-img_celtty.png" alt="profile pic">
+                        <div class="d-flex flex-column justify-content-center">
+                            <small class="fw-semibold">{{ post.author }}</small>
+                            <small>full-stack Software Developer</small>
+                            <small>{{ post.updated_date }}</small>
+                        </div>
+                    </div>
+                </div>
+                <p class="py-5 text-center text-muted">{{ post.excerpt }}</p>
+                <nav class="d-block d-md-none">
+                    <ul class="list-unstyled d-flex justify-content-around flex-wrap">
+                        <li class="toc-link"><a class="text-decoration-none action-link" href="#intro">intro</a></li>
+                        <li class="toc-link"><a class="text-decoration-none action-link" href="#body">body</a></li>
+                        <li class="toc-link"><a class="text-decoration-none action-link" href="#conclusion">conclusion</a></li>
+                    </ul>
+                </nav>
+                <p>{{ post.content | safe }}</p>
+                {% if request.user.is_superuser %}
+                    <div class="d-flex gap-3">
+                        <a href="{{ post.get_update_absolute_url }}" class="text-info"> Update</a>
+                        <a href="{{ post.get_delete_absolute_url }}" class="text-danger"> Delete</a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+<ul class="list-unstyled post-attach">
+    <li class="like-box">
+        <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+    </li>
+    <li class="comment-box">
+        <a href="#"><i class="fa-solid fa-comment"></i></a>
+    </li>
+</ul>
+{% endblock %}
+{% block post_load_js %}
+    {{ block.super }}
+    <script src="{% static 'content_nav.js' %}"></script>
+{% endblock %}
