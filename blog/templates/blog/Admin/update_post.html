@@ -5,11 +5,10 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
-    <h3 class="text-center text-uppercase my-5">Update post</h3>
+<div class="container my-5">
     <div class="row">
-        <div class="col-12 col-md-8">
-            <h5 class="text-center my-3">Update post</h5>
+        <div class="col-12 col-md-8 post mx-auto">
+            <h3 class="text-center my-5">Update post</h3>
             <form action="{{ post.get_update_absolute_url }}" method="POST">
                 {% csrf_token %}
                 <div class="row">
@@ -36,11 +35,8 @@
                         {{ form.published | as_crispy_field}}
                     </div>
                 </div>
-                <input type="submit">
+                <input type="submit" class="action-btn" name="post-form" value="Save">
             </form>
-        </div>
-        <div class="col-12 col-md-4">
-            <h5 class="text-center my-3">Update post</h5>
         </div>
     </div>
 </div>

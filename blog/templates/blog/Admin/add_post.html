@@ -5,43 +5,46 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
-    <h3 class="text-center text-uppercase my-5">add post</h3>
+<div class="container my-5">
     <div class="row">
-        <div class="col-8">
-            <h5 class="text-center my-5">add post</h5>
+        <div class="col-12 col-md-8 order-2 order-md-1 post">
+            <h3 class="text-center my-5">add post</h3>
             <form action="{% url 'add_post' %}" method="POST">
                 {% csrf_token %}
                 <div class="row">
                     <div class="col-12">
-                        {{ form.image | as_crispy_field}} 
+                        {{ post_form.image | as_crispy_field}} 
                     </div>
                     <div class="col-12 col-md-6">
-                        {{ form.title | as_crispy_field}}
+                        {{ post_form.title | as_crispy_field}}
                     </div>
                     <div class="col-12 col-md-6">
-                        {{ form.author | as_crispy_field}}
+                        {{ post_form.author | as_crispy_field}}
                     </div>
                     <div class="col-12 col-md-6">
-                        {{ form.excerpt | as_crispy_field}}
+                        {{ post_form.excerpt | as_crispy_field}}
                     </div>
                     <div class="col-12 col-md-6">
-                        {{ form.categories | as_crispy_field}}
+                        {{ post_form.categories | as_crispy_field}}
                     </div>
                     <div class="col-md-12">
-                        {{ form.content | as_crispy_field }}
-                        {{ form.media }}
+                        {{ post_form.content | as_crispy_field }}
+                        {{ post_form.media }}
                     </div>
                     <div class="col-12">
-                        {{ form.published | as_crispy_field}}
+                        {{ post_form.published | as_crispy_field}}
                     </div>
                 </div>
-                <input type="submit">
+                <input type="submit" class="action-btn" name="post-form" value="Save">
             </form>
         </div>
-        <h5 class="text-center my-5">add post</h5>
-        <div class="col-4">
-
+        <div class="col-12 col-md-4 order-1 order-md-2 category">
+            <h3 class="text-center my-5">add category</h3>
+            <form method="POST" action="#">
+                {% csrf_token %}
+                {{ category_form | crispy }}
+                <input type="submit" class="action-btn" name="category-form" value="Save">
+            </form>
         </div>
     </div>
 </div>

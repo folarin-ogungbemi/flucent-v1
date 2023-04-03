@@ -11,6 +11,7 @@
     --box-shadow-1: 0px 0px 3px 0.2px rgba(0, 0, 0, 0.5);
     --box-shadow-2: 0px 0px 3px 0.2px rgba(0, 0, 0, 0.7);
     --box-shadow-3: 0px 0px 2px 1px rgba(0, 0, 0, 0.5);
+    --radius: 5rem;
 }
 
 * {
@@ -35,6 +36,42 @@ body {
 .top-navbar{
     background-color: var(--col-light);
     box-shadow: var(--box-shadow);
+}
+
+/*************
+    FORMS
+************** */
+.form-control,
+.form-select{
+    color:var(--col-pry);
+    border-color: var(--col-sec);
+}
+
+.form-control:focus,
+.form-select:focus{
+    box-shadow: var(--box-shadow);
+    border-color: var(--col-sec);
+}
+
+.comment-area{
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    padding: 2rem;
+}
+
+.action-btn{
+    padding: 0.2rem 0.5rem;
+    width: fit-content;
+    border:2px solid var(--col-pry);
+    border-radius: var(--radius);
+    background-color: var(--col-pry);
+    color: var(--col-light);
+    min-width: 100px;
+}
+
+.action-btn:hover{
+    box-shadow: var(--box-shadow-1);
+    background-color: var(--col-pry);
 }
 
 .action-link {
@@ -71,8 +108,8 @@ body {
     color: var(--col-light);
     min-height: fit-content;
     position: absolute;
-    top: 0;
-    right: -1%;
+    bottom: 0;
+    right: -0.5%;
 }
 
 .article-info {
@@ -86,7 +123,7 @@ body {
 }
 
 .search{
-    border-radius: 5rem;
+    border-radius: var(--radius);
     padding: 0.8rem;
 }
 
@@ -95,7 +132,7 @@ body {
     top: 50%;
     right: 0.5%;
     transform: translate(-0.5%, -50%);
-    border-radius: 5rem;
+    border-radius: var(--radius);
     background-color: var(--col-pry);
     color: var(--col-light);
     border:2px solid var(--col-pry);
@@ -122,7 +159,7 @@ body {
     border: 1px solid var(--col-pry);
     padding: 0 0.5rem 0 0.5rem;
     font-weight: bold;
-    border-radius: 5rem;
+    border-radius: var(--radius);
     width: fit-content;
 }
 
@@ -188,9 +225,9 @@ body {
     transform: translate(-50%, 0);
     padding: 0.5rem;
     background-color: var(--col-light);
-    width: 100px;
+    width: 150px;
     box-shadow: var(--box-shadow);
-    border-radius: 5rem;
+    border-radius: var(--radius);
     display:flex;
     justify-content: space-around;
 }
@@ -205,6 +242,17 @@ body {
 
 .post-content {
     width: 100%;
+}
+
+/* ***********
+    ADMIN
+************ */
+.category h3,
+.post h3{
+    background-color: var(--col-pry);
+    border-radius: var(--radius);
+    padding: 0.5rem 0;
+    color: var(--col-light);
 }
 
 /*  *****************
