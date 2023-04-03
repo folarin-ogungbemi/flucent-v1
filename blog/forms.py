@@ -1,10 +1,16 @@
 from blog.models import Category, Post, Comment
 from django import forms
-from django.forms import FileInput, Textarea
+from django.forms import FileInput, Textarea, TextInput
 from ckeditor.widgets import CKEditorWidget
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Submit, Field
 from crispy_forms.bootstrap import PrependedText
+
+
+class CategoryForm(forms.ModelForm):
+    class Meta:
+        model = Category
+        fields = '__all__'
 
 
 class PostForm(forms.ModelForm):
@@ -36,3 +42,12 @@ class PostForm(forms.ModelForm):
         self.helper.form_method = 'post'
         self.helper.layout = Layout(
             Field('content', css_class='ckeditor'),)
+
+
+class CommentForm(forms.ModelForm):
+    content = forms.CharField(
+        widget=Textarea(attrs={'rows': 3}), label='Comment')
+
+    class Meta:
+        model = Comment
+        fields = ['content']
