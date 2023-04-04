@@ -59,6 +59,11 @@ body {
     padding: 2rem;
 }
 
+.user-comment{
+    background-color: #fff;
+    padding: 0.5rem;
+}
+
 .action-btn{
     padding: 0.2rem 0.5rem;
     width: fit-content;

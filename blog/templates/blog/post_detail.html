@@ -38,21 +38,37 @@
                 </div>
                 <p class="my-5 text-center text-muted">{{ post.excerpt }}</p>
                 <p>{{ post.content | safe }}</p>
-                <div class="row">
-                    <div class="col-12 comment-area">
-                        <form method="POST" action="add_post.html">
-                            {% csrf_token %}
-                            {{ comment_form|crispy }}
-                            <input type="submit" value="Send" class="action-btn" name="comment-form">
-                        </form>
-                    </div>
-                </div>
                 {% if request.user.is_superuser %}
                     <div class="d-flex gap-3 my-5">
                         <a href="{{ post.get_update_absolute_url }}" class="text-info"> Update</a>
                         <a href="{{ post.get_delete_absolute_url }}" class="text-danger"> Delete</a>
                     </div>
                 {% endif %}
+                <div class="row">
+                    <div class="col-12 comment-area">
+                        <form method="POST">
+                            {% csrf_token %}
+                            {{ comment_form|crispy }}
+                            <input type="submit" value="Send" class="action-btn" name="comment-form">
+                        </form>
+                        <div class="comments my-5">
+                            <h4>Comments</h4>
+                            <div class="row">
+                                {% for comment in comments %}
+                                <div class="col-12 user-comment mb-2">
+                                    <small><i class="fa-solid fa-user pe-1"></i><strong>{{ comment.author }}</strong> {{ comment.created_date }}</small>
+                                    <p class="my-1">{{ comment.content }}</p>
+                                    <div>
+                                        <a href="#" class="text-decoration-none"><i class="fa-solid fa-thumbs-up"></i><small class="ps-1 text-muted">1</small></a>
+                                    </div>
+                                </div>
+                                {% empty %}
+                                    <p>No comments yet.</p>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
