@@ -1,10 +1,9 @@
 {% for post in posts %}
-{{ MEDIA_URL }}
   <div class="col-12 col-md-6 my-2">
     <div class="my-3 article-card">
       <small class="article-category">{{ post.categories.first }}</small>
       <a href="{{ post.get_detail_absolute_url }}" class="d-none d-md-flex justify-content-start">
-        {% if post.image.url %}
+        {% if post.image %}
           <img
           class="#"
           width="170"
