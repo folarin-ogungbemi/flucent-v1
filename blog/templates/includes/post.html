@@ -11,14 +11,6 @@
           src="{{ post.image.url }}"
           alt="{{ post.title }} featured image"
         />
-        {% elif 'placeholder' in post.image %}
-          <img
-          class="#"
-          width="170"
-          height="170"
-          src="https://res.cloudinary.com/dzdyzl4r5/image/upload/v1667343910/samples/people/smiling-man.jpg"
-          alt="{{ post.title }} placeholder"
-        />
         {% else %}
         <img
             class="#"
