@@ -49,14 +49,22 @@ class PostCreateView(LoginRequiredMixin, CreateView):
         return super().post(request, *args, **kwargs)
 
 
-class PostUpdateView(LoginRequiredMixin, UpdateView):
+class PostUpdateView(LoginRequiredMixin, CreateView, UpdateView):
     model = Post
     form_class = PostForm
     template_name = 'blog/Admin/update_post.html'
 
+    def post(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        form_class = self.get_form_class()
+        form = form_class(request.POST, request.FILES, instance=self.object)
+        if form.is_valid():
+            return self.form_valid(form)
+        else:
+            return self.form_invalid(form)
+
     def get_success_url(self):
-        return reverse_lazy(
-            'post_detail', kwargs={'slug': self.object.slug})
+        return reverse_lazy('post_detail', kwargs={'slug': self.object.slug})
 
 
 class PostDeleteView(LoginRequiredMixin, DeleteView):
