@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // CREATING NAVLINKS DICTIONARY TO BE ITERATED ON
     const navDict = {
-        Home: "/",
+        Home: "/#hero",
         About: "/#about",
         Projects: "/#projects",
         Contact: "/#contact",

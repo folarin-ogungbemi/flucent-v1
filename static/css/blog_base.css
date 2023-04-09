@@ -135,8 +135,8 @@ body {
 .search-button{
     position: absolute;
     top: 50%;
-    right: 0.5%;
-    transform: translate(-0.5%, -50%);
+    right: 0.55%;
+    transform: translate(-0.55%, -50%);
     border-radius: var(--radius);
     background-color: var(--col-pry);
     color: var(--col-light);

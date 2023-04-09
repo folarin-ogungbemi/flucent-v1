@@ -10,8 +10,8 @@
 .project-btn,
 .skill{
     width: 140px;
-    border: 2px solid rgba(237, 89, 89, 0.5);
-    box-shadow: 0.5px 0.5px 1.5px 0.5px rgba(237, 89, 89, 0.5);
+    border: 2px solid var(--f-col-grab);
+    box-shadow: 0.5px 0.5px 1.5px 0.5px var(--btn-bg-col);
     text-align: center;
     padding: 5px 15px;
     border-radius: 5px;
@@ -20,12 +20,12 @@
 .project-btn a,
 .skill-body a{
     text-decoration: none;
-    color: rgba(237, 89, 89, 0.5);
+    color: var(--f-col-grab);
 }
 
 .project-btn:hover,
 .skill:hover{
-    border: 2px solid var(--f-col-dark);
+    border: 2px solid transparent;
 }
 
 @media (max-width:768px){
@@ -44,7 +44,7 @@
     }
 
     a.skill{
-        color: var(--f-col-light);
+        color: var(--text-color);
     }
 
     .skill::before{
@@ -54,7 +54,7 @@
     position: absolute;
     top: 50%;
     left: 0;
-    background-color: var(--f-col-grab);
+    background-color: #ED5959;
     padding-right: 0.5rem;
     
     /* https://www.cssportal.com/css-clip-path-generator/ */
@@ -69,6 +69,4 @@
 
 .about-text{
     line-height: 1.5rem;
-    font-weight: 500;
-    opacity: 0.85;
 }

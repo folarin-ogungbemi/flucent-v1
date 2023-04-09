@@ -6,10 +6,14 @@
     /* Dark mode variables */
     --bg-color: #0a031a;
     --text-color: #fff;
+    --form-col: #fff;
     /* colors */
-    --f-col-dark: #0a031a;
+    --btn-bg-col: rgb(237, 89, 89, 0.2);
+    --btn-bg-col-2: rgb(237, 89, 89, 0.6);
+    --box-shadow: 0px 0px 3px 0.2px rgba(0, 0, 0, 0.2);
     --f-col-grab: #ED5959;
     --f-col-light: #fff;
+    --active-col:#fff;
     /* transition */
     --trans-ease: all 0.5s ease-in-out;
 }
@@ -18,6 +22,11 @@
 [data-theme="light"] {
     --bg-color: #fff;
     --text-color: #0a031a;
+    --f-col-grab: #0a031a;
+    --btn-bg-col: #0a031a33;
+    --btn-bg-col-2: #0a031a99;
+    --form-col: #0a031a;
+    --active-col:#ED5959;
 }
 
 #theme-toggle{
@@ -35,6 +44,18 @@
 
 .text-grab{
     color: var(--f-col-grab);
+}
+
+.form-control,
+.form-select{
+    color:#0a031a;
+    border-color: var(--form-col);
+}
+
+.form-control:focus,
+.form-select:focus{
+    box-shadow: var(--box-shadow);
+    border-color: #0a031a;
 }
 
 body{
@@ -76,7 +97,7 @@ a{
 .action-btn{
     color: var(--f-col-grab) !important;
     border: 1.5px solid var(--f-col-grab);
-    background: rgba(237, 89, 89, 0.2);
+    background: var(--btn-bg-col);
     border-radius: 5px;
     font-weight: 500;
     width: fit-content;
@@ -86,7 +107,7 @@ a{
 .action-btn:hover{
     color: var(--f-col-grab);
     border: 1.5px solid var(--f-col-grab);
-    background: rgba(237, 89, 89, 0.4);
+    background: var(--btn-bg-col-2);
     transition: var(--trans-ease);
 }
 
@@ -100,7 +121,7 @@ a{
     position: relative;
     height: 3.5rem;
     width: 3.5rem;
-    background: rgba(237, 89, 89, 0.3);
+    background: var(--btn-bg-col-2);
     border-radius: 100%;
     font-size: 1.5rem;
 }
@@ -123,7 +144,7 @@ a{
 }
 
 .nav-list a:hover{
-    color: var(--f-col-grab);
+    color: #ED5959;
     transition: var(--trans-ease);
 }
 
@@ -153,7 +174,7 @@ a{
 }
 
 .nav-link.link-is-active{
-    color: var(--f-col-grab);
+    color: #ED5959;
 }
 
 /* Hamburger button */

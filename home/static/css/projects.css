@@ -13,9 +13,9 @@
 }
 
 .project-btn.active{
-    color: var(--f-col-light);
-    border: 2px solid var(--f-col-light);
-    box-shadow: 0.5px 0.5px 1.5px 0.5px rgba(255, 255, 255, 0.5);
+    color: var(--active-col);
+    border: 2px solid var(--active-col);
+    box-shadow: 0.5px 0.5px 1.5px 0.5px var(--box-shadow);
     transition: var(--trans-ease);
 }
 
@@ -57,7 +57,7 @@
     opacity: 0.25;
     transition: var(--trans-ease);
     background-color: var(--f-col-light);
-    color: var(--f-col-dark);
+    color: #0a031a;
     padding: 1rem;
     font-size: 1.2rem;
     font-weight: 500;
@@ -65,11 +65,11 @@
 
 .project-caption-content a{
     font-size: 1.7rem;
-    color: var(--f-col-dark);
+    color: #0a031a;
 }
 
 .project-caption-content a:hover{
-    color: var(--f-col-grab);
+    color: #ED5959;
     transition: var(--trans-ease);
 }
 

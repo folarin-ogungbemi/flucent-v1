@@ -21,7 +21,7 @@
     margin-left: auto;
     align-items: center;
     justify-content: center;
-    background: rgba(237, 89, 89, 0.5);
+    background: var(--btn-bg-col-2);
 }
 
 .back-to-top:hover{
