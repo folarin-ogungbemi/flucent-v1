@@ -97,6 +97,9 @@ a{
 .action-btn{
     color: var(--f-col-grab) !important;
     border: 1.5px solid var(--f-col-grab);
+    border-right: 2.5px solid var(--f-col-grab);
+    border-bottom: 2.5px solid var(--f-col-grab);
+    box-shadow: 1.5px 1.5px 1.5px var(--f-col-grab);
     background: var(--btn-bg-col);
     border-radius: 5px;
     font-weight: 500;

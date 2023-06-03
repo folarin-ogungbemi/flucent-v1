@@ -60,14 +60,14 @@ INSTALLED_APPS = [
     'cloudinary',
 
     # ext-apps
-    'ckeditor',
+    # 'ckeditor',
     'django_summernote',
     'crispy_forms',
     'crispy_bootstrap5',
 
     # local app
     'home',
-    'blog',
+    # 'blog',
 ]
 
 MIDDLEWARE = [
@@ -87,7 +87,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             os.path.join(BASE_DIR, 'templates'),
-            os.path.join(BASE_DIR, 'ckeditor_templates')
+            # os.path.join(BASE_DIR, 'ckeditor_templates')
             ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -110,16 +110,16 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
-SITE_ID = 1
+# SITE_ID = 1
 
-ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
-ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_EMAIL_VERIFICATION = 'none'
-ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = False
-ACCOUNT_USERNAME_MIN_LENGTH = 3
-LOGIN_URL = '/accounts/login/'
-LOGIN_REDIRECT_URL = '/blog'
-ACCOUNT_LOGOUT_REDIRECT_URL = '/blog'
+# ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+# ACCOUNT_EMAIL_REQUIRED = True
+# ACCOUNT_EMAIL_VERIFICATION = 'none'
+# ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = False
+# ACCOUNT_USERNAME_MIN_LENGTH = 3
+# LOGIN_URL = '/accounts/login/'
+# LOGIN_REDIRECT_URL = '/blog'
+# ACCOUNT_LOGOUT_REDIRECT_URL = '/blog'
 
 # Provider specific settings
 SOCIALACCOUNT_PROVIDERS = {
@@ -145,15 +145,15 @@ MESSAGE_TAGS = {
 
 WSGI_APPLICATION = 'flucent_developer.wsgi.application'
 
-CKEDITOR_UPLOAD_PATH = "uploads/"
+# CKEDITOR_UPLOAD_PATH = "uploads/"
 
-CKEDITOR_CONFIGS = {
-    'default': {
-        'toolbar': 'full',
-        'height': 300,
-        'width': '100%',
-    }
-}
+# CKEDITOR_CONFIGS = {
+#     'default': {
+#         'toolbar': 'full',
+#         'height': 300,
+#         'width': '100%',
+#     }
+# }
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
