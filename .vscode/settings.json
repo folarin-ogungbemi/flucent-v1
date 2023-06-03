@@ -23,5 +23,9 @@
    "files.autoSave": "off",
    "workbench.colorTheme": "Default Dark+",
    "terminal.integrated.gpuAcceleration": "canvas",
-   "editor.defaultFormatter": "HookyQR.beautify"
+   "editor.defaultFormatter": "HookyQR.beautify",
+   "[python]": {
+      "editor.defaultFormatter": "ms-python.autopep8"
+   },
+   "python.formatting.provider": "none"
 }
