@@ -6,8 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         Home: "/#hero",
         About: "/#about",
         Projects: "/#projects",
-        Contact: "/#contact",
-        Résumé: "https://res.cloudinary.com/dzdyzl4r5/image/upload/v1679430764/resume_wsu6dq.pdf",
+        Contact: "/#contact"
     }
 
     // CREATING TOP NAVLIST ELEMENT
@@ -53,13 +52,13 @@ document.addEventListener('DOMContentLoaded', () => {
     topNav.children[1].appendChild(mobileNavDivEl1);
 
     // STYLE NAVBAR RESUME BUTTON
-    const icon = `<i class="fa-solid fa-download pt-1"></i>`
-    const navbarResume1 = document.getElementsByTagName('li')[4];
-    const navbarResume2 = document.getElementsByTagName('li')[9];
-    navbarResume1.className = 'action-btn d-flex gap-2';
-    navbarResume2.className = 'action-btn d-flex gap-2';
-    navbarResume1.innerHTML += icon;
-    navbarResume2.innerHTML += icon;
+    // const icon = `<i class="fa-solid fa-download pt-1"></i>`
+    // const navbarResume1 = document.getElementsByTagName('li')[4];
+    // const navbarResume2 = document.getElementsByTagName('li')[9];
+    // navbarResume1.className = 'action-btn d-flex gap-2';
+    // navbarResume2.className = 'action-btn d-flex gap-2';
+    // navbarResume1.innerHTML += icon;
+    // navbarResume2.innerHTML += icon;
 
     // ACTIVE LINK LISTENER SYSTEM
     const navLinks = document.querySelectorAll('.nav-link');
