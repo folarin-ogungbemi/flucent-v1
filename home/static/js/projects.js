@@ -2,15 +2,15 @@ const projects = [
     {
         name:"EmpowerEd",
         description: "EmpowerEd is an educational platform developed with the aim to provide education resources to underprivileged children. The application has a range of features to make learning interactive, accessible and engaging for students while also allowing students to connect with mentors, and providing the avenue for parents to communicate conveniently with teachers. In summary, the Website aim to achieve the goal of creating an education enabled environment for students.",
-        image:"https://res.cloudinary.com/dzdyzl4r5/image/upload/v1678281658/homepage_mockup_hesaqx.jpg",
-        github:"https://github.com/folarin-ogungbemi/EmpowerEd",
+        image:"https://res.cloudinary.com/dzdyzl4r5/image/upload/v1687755759/EmpowerEd_i4kyiw.jpg",
+        github:"https://github.com/folarin-ogungbemi/EmpowerEd-v1-Hackthon",
         url:"https://team4-empowered.herokuapp.com/",
         technology:["HTML", "CSS", "Bootstrap", "Javascript", "Django", "Python", "postgreSQL", "Typescript", "React", "Google Cloud", "Git", "Agile", "Heroku"]
     },
     {
         name:"Gosip Bookstore",
         description: "Gosip Bookstore demonstrates the functionalities of an E-commerce website specifically with a B2C(Business to Customer) relationship. Buyers can view a list of books within the Bookstore, select an individual book from the list to view its details, choose to add the book to their wishlist for later purchase or decide to add the book to their shopping cart at a certain quantity from where they can proceed to checkout the Item(s) using a secure payment system Stripe.",
-        image:"https://res.cloudinary.com/dzdyzl4r5/image/upload/v1678281803/mockup_qqz2bu.jpg",
+        image:"https://res.cloudinary.com/dzdyzl4r5/image/upload/v1687755600/gosip_bookstore_pxwy9g.jpg",
         github:"https://github.com/folarin-ogungbemi/Gosip-Bookstore",
         url:"https://flo-gosip.herokuapp.com/",
         technology:["HTML", "CSS", "Bootstrap", "Javascript", "Django", "Python", "postgreSQL", "Stripe", "Google Cloud", "Git", "Agile", "Heroku"]
@@ -18,7 +18,7 @@ const projects = [
     {
         name:"Yabash",
         description: "Yabash is a restaurant application created majorly with the python Django functionality. The restaurant can take orders from a user and store the booking details in the user's booking records for later access. This booking(s) can be assessed, updated or cancelled as seen fit by the user.",
-        image:"https://res.cloudinary.com/dzdyzl4r5/image/upload/v1673288665/yabash-image_rz99ii.png",
+        image:"https://res.cloudinary.com/dzdyzl4r5/image/upload/v1687755129/yabash_main-page_s6uc1l.png",
         github:"https://github.com/folarin-ogungbemi/Yabash-GmbH",
         url:"https://flo-yabash.herokuapp.com/",
         technology:["HTML", "CSS", "Bootstrap", "Javascript", "Google Cloud", "Python", "Django", "postgreSQL", "Git", "Agile", "Heroku"]
@@ -26,7 +26,7 @@ const projects = [
     {
         name:"Kologram",
         description: "Kologram is a simple project tracker built with Python in connection with google sheets API to keep track of users' interested financial projects and store user data in google sheets.",
-        image:"https://res.cloudinary.com/dzdyzl4r5/image/upload/v1673288664/kologram_jnotgm.jpg",
+        image:"https://res.cloudinary.com/dzdyzl4r5/image/upload/v1687756266/kologram_igpn3n.png",
         github:"https://github.com/folarin-ogungbemi/kologram",
         url:"https://flo-kologram.herokuapp.com/",
         technology:["Python", "Google Cloud", "Heroku", 'Git']
@@ -34,7 +34,7 @@ const projects = [
     {
         name:"Twain Land",
         description: "Twain-land introduces the famous concentration game that both young and old enjoy playing. However, twain-land takes a little tweak by tending towards incorporating a flash card for learning about different countries in the world and pairing them with their corresponding flag colours.",
-        image:"https://res.cloudinary.com/dzdyzl4r5/image/upload/v1673288664/twain-land-image_thajte.jpg",
+        image:"https://res.cloudinary.com/dzdyzl4r5/image/upload/v1687756266/twaingame_mockup_nzpx1n.png",
         github:"https://github.com/folarin-ogungbemi/twain-land",
         url:"https://folarin-ogungbemi.github.io/twain-land/",
         technology:["HTML", "CSS", "Javascript", 'Git']
